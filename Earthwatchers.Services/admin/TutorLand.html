@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Guardians - Admin - Tutor Land</title>
+    <script src="jquery-1.6.2.min.js" type="text/javascript"></script>
+    <script src="jquery.base64.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <h3>Set Tutor Land</h3>
+
+    <br>
+    <div style="padding-bottom:3px;">
+        <p style="display:inline;">Username:</p>
+        <input style="width: 190px;" type="text" id="tbUsername" value="" />
+    </div>
+    <div>
+        <p style="display:inline; padding-right:3px;">Password:</p>
+        <input style="width: 190px;" type="password" id="tbPassword" value="" />
+    </div>
+
+
+    <h4>Set TutorLand by GeoHexKey</h4>
+    <form name="setTutorLand">
+        <label for="ID">GeoHexKey: </label>
+        <input type="text" name="geoHexCode" id="geoHexCode" />
+        <br />
+        <input type="submit" value="Save" class="setTutorLand" />
+    </form>
+
+    <script>
+        function getAuthString() {
+            return "Basic " + $.base64Encode(document.getElementById("tbUsername").value + ":" + document.getElementById("tbPassword").value);
+        }
+
+        $(function () {
+            $(".setTutorLand").click(function () {
+                var geoHexCod = $("#geoHexCode").val();
+                if (geoHexCod == "") {
+                    alert("You must set the user GeoHexCode");
+                    return false;
+                }
+                $.ajax({
+                    url: "../api/land/settutorland/code=" + geoHexCod,
+                    type: "GET",
+                    contentType: "application/json ; charset=utf-8",
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("Authorization", getAuthString());
+                    },
+                    success: function () {
+                        alert("Congratulations, Tutor Land is updated.");
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(errorThrown);
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

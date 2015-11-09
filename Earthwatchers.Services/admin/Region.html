@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Guardians Admin</title>
+    <link href="uploadfile.css" rel="stylesheet" />
+    <script src="jquery-1.6.2.min.js"></script>
+    <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="jquery.base64.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function getAuthString() {
+            return "Basic " + $.base64Encode(document.getElementById("tbUsername").value + ":" + document.getElementById("tbPassword").value);
+        }
+
+        function LoadRegions() { //TODO: RELLENAR TABLA CON LOS VALORES.
+            $("#regionstable tr").remove();
+            $('#loadinggif').show();
+            $.ajax({
+                type: "GET",
+                url: "../api/region/getall",
+                contentType: "application/json ; charset=utf-8",
+                success: function (items) {
+                    $.each(items, function (i, item) {
+                        var html = '<td>' + item.Id + '</td>'
+                       + '<td>' + item.Name + '</td>'
+                       + '<td style="text-align: center;">' + item.CountryCode + '</td>'
+                       + '<td class="tdnumber">' + item.LowThreshold + '</td>'
+                       + '<td class="tdnumber">' + item.HighThreshold + '</td>'
+                       + '<td class="tdnumber">' + item.NormalPoints + '</td>'
+                       + '<td class="tdnumber">' + item.BonusPoints + '</td>'
+                       + '<td class="tdnumber">' + item.PenaltyPoints + '</td>'
+                       //+ '<td><a href="#" onclick="deleteBasecamp(' + $(this).attr('Id') + ');" title="Borrar Basecamp">X</a></td>'
+                       + '<td><a href="#" onclick="editRegion(' + $(this).attr('Id') + ');" title="Edit Region">&laquo;&laquo;&laquo;&laquo</a></td>';
+
+                        $('<tr></tr>').html(html).appendTo('#regionstable');
+                    });
+                    $('#loadinggif').hide();
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    $('#loadinggif').hide();
+                    alert(errorThrown);
+                }
+            });
+        }
+
+        function editRegion(id) {
+
+            $('#add').addClass("collapsed");
+            $('#editBox').removeClass("collapsed");
+            $('#editBox').addClass("visible");
+
+            //Cargo los campos
+            $.ajax({
+                type: "GET",
+                url: "../api/region/getbyid/id=" + id,
+                //dataType: "json",
+                contentType: "application/json ; charset=utf-8",
+                success: function (region) {
+                    $(region).each(function () {
+                        idInput.value = $(this).attr('Id');
+                        newnameInput.value = $(this).attr('Name');
+                        newcountryCodeInput.value = $(this).attr('CountryCode');
+                        newlowThresholdInput.value = $(this).attr('LowThreshold');
+                        newhighThresholdInput.value = $(this).attr('HighThreshold');
+                        newnpInput.value = $(this).attr('NormalPoints');
+                        newbpInput.value = $(this).attr('BonusPoints');
+                        newppInput.value = $(this).attr('PenaltyPoints');
+                    })
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+
+            //Add Region
+            $("#addRegion").click(function () {
+                var name = $('#nameInput').val();
+                var countryCode= $('#countryCodeInput').val();
+                var lowThreshold = $('#lowThresholdInput').val();
+                var highThreshold = $('#highThresholdInput').val();
+                var npInput = $('#npInput').val();
+                var bpInput = $('#bpInput').val();
+                var ppInput = $('#ppInput').val();
+
+                var region= new Object();
+                region.Name = name;
+                region.CountryCode = countryCode;
+                region.LowThreshold = lowThreshold;
+                region.HighThreshold = highThreshold;
+                region.NormalPoints = npInput;
+                region.BonusPoints = bpInput;
+                region.PenaltyPoints = ppInput;
+
+                $.ajax({
+                    type: "POST",
+                    url: "../api/region",
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("Authorization", getAuthString());
+                    },
+                    data: JSON.stringify(region),
+                    contentType: "application/json ; charset=utf-8",
+                    dataType: "json",
+                    success: function () {
+
+                        //limpio los inputs
+                        nameInput.value = "";
+                        countryCode.value = "";
+                        lowThresholdInput.value = "";
+                        highThresholdInput.value = "";
+                        npInput.value = "";
+                        bpInput.value = "";
+                        ppInput.value = "";
+
+                        alert("Congratulations, region added.");
+                        LoadRegions();
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert("error, something went wrong adding the region");
+                    }
+                });
+            });
+
+            $("#editRegionEnded").click(function () {
+
+                //Cargo los valores
+                var id = $('#idInput').val();
+                var newnameInput = $('#newnameInput').val();
+                var newcountryCodeInput = $('#newcountryCodeInput').val();
+                var newlowThresholdInput = $('#newlowThresholdInput').val();
+                var newhighThresholdInput = $('#newhighThresholdInput').val();
+                var newnpInput = $('#newnpInput').val();
+                var newbpInput = $('#newbpInput').val();
+                var newppInput = $('#newppInput').val();
+
+                //Creo el objeto a enviar
+                var region = new Object();
+                region.Id = id;
+                region.Name = newnameInput;
+                region.CountryCode = newcountryCodeInput;
+                region.LowThreshold = newlowThresholdInput;
+                region.HighThreshold = newhighThresholdInput;
+                region.NormalPoints = newnpInput;
+                region.BonusPoints = newbpInput;
+                region.PenaltyPoints = newppInput;
+
+                $.ajax({
+                    type: 'POST',
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("Authorization", getAuthString());
+                    },
+                    url: "../api/region/edit",
+                    data: JSON.stringify(region),
+                    contentType: "application/json ; charset=utf-8",
+                    dataType: "json",
+                    success: function () {
+                        LoadRegions();
+                        $('#editBox').removeClass("visible");
+                        $('#editBox').addClass("collapsed");
+                        $('#add').removeClass("collapsed");
+
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert("error, something went wrong editing region");
+                        $('#editBox').removeClass("visible");
+                        $('#editBox').addClass("collapsed");
+                        $('#add').removeClass("collapsed");
+                    }
+                });
+            });
+
+            $("#LoadRegionsButton").click(function () {
+                LoadRegions();
+            });
+        });
+
+    </script>
+    <style>
+       
+        body {
+            font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+        }
+
+        .tdnumber {
+            text-align: right;
+        }
+        .label {
+            float: left;
+            width: 150px;
+        }
+
+        .visible {
+            visibility: visible;
+            display: block;
+        }
+
+        .collapsed {
+            visibility: collapse;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h3>Administrator - Regions</h3>
+    <br />
+    username:
+    <input type="text" id="tbUsername" value="" /><br />
+    password:
+    <input type="password" id="tbPassword" value="" />
+    <br />
+    <br />
+    <input id="LoadRegionsButton" type="button" value="Load Regions" />
+    <br />
+    <div id="add">
+        <h4>Add Region</h4>
+        <div class="label">Name</div>
+        <div><input id="countryCodeInput" type="hidden" contenteditable="false" /></div>
+        <div><input id="nameInput" type="text" maxlength="200" /></div>
+        <div class="label">Low Threshold</div>
+        <div><input id="lowThresholdInput" type="number" /></div>
+        <div class="label">High Threshold</div>
+        <div><input id="highThresholdInput" type="number" /></div>
+        <div class="label">Normal Points</div>
+        <div><input id="npInput" type="number" /></div>
+        <div class="label">Bonus Points</div>
+        <div><input id="bpInput" type="number" /></div>
+        <div class="label">Penalty Points</div>
+        <div><input id="ppInput" type="number" /></div>
+
+        <input id="addRegion" type="button" value="Add" />
+        <br />
+    </div>
+    <br />
+
+    <div id="editBox" class="collapsed">
+        <h4>Edit Region</h4>
+        <div><input id="idInput" type="hidden" contenteditable="false" /></div>
+        <div><input id="newcountryCodeInput" type="hidden" contenteditable="false" /></div>
+        <div class="label">Name</div>
+        <div><input id="newnameInput" type="text" contenteditable="false" maxlength="200"  /></div>
+        <div class="label">Low Threshold</div>
+        <div><input id="newlowThresholdInput" type="number" /></div>
+        <div class="label">High Threshold</div>
+        <div><input id="newhighThresholdInput" type="number" /></div>
+        <div class="label">Normal Points</div>
+        <div><input id="newnpInput" type="number" /></div>
+        <div class="label">Bonus Points</div>
+        <div><input id="newbpInput" type="number" /></div>
+        <div class="label">Penalty Points</div>
+        <div><input id="newppInput" type="number" /></div>
+
+        <input id="editRegionEnded" type="button" value="Save Changes" />
+    </div>
+
+                                
+    <h4>Region's List</h4>  <img id="loadinggif" src="../css/fancybox_loading.gif" style="display: none; margin-top: 20px" />
+    <table border="1" cellpadding="7" cellspacing="0">
+        <thead>
+            <tr style="background-color: #cecece; text-align: center; font-weight: bold;">
+                <td>Id</td>
+                <td>Name</td>
+                <td>Country</td>
+                <td>Low Threshold</td>
+                <td>High Threshold</td>
+                <td>Normal Points</td>
+                <td>Bonus Points</td>
+                <td>Penalty Points</td>
+                <td>Edit</td>
+            </tr>
+        </thead>
+        <tbody id="regionstable"></tbody>
+    </table>
+    <br />
+
+
+    <a href="index.html">back</a>
+
+</body>
+
+</html>

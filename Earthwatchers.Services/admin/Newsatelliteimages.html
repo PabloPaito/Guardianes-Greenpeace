@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+        <title>Guardianes Admin - SatelliteImages</title>
+        <script src="jquery-1.6.2.min.js" type="text/javascript"></script>
+        <script src="jquery.base64.js" type="text/javascript"></script>
+        <style type="text/css">
+            .greenButton{padding:10px; background-color:forestgreen; color:white; text-decoration:none; border:solid 2px black; display:inline; margin-right:15px;}
+                .greenButton:hover{background-color:#27A327; cursor:pointer;} 
+                 
+            input[type=text], input[type=number], input[type=password], input[type=date] { width: 200px; }
+        </style>
+    </head> 
+    <body>
+        <h3>Satellite images</h3>
+        username: <input type="text" id="tbUsername"/><br />
+        password: <input type="password" id="tbPassword"/><br />
+        <br />
+        <br />
+
+        <a id="ShowLoadedImages" class="greenButton">Show Loaded Images</a>
+        <!--<a id="GetServerImages" class="greenButton">Get Server Images</a>-->
+
+        <br />
+
+        <div id="editDiv" style="display:none;">
+            <h4>Edit satellite image</h4>
+            <form id="editSatelliteImage" name="editSatelliteImage">
+                <table border="0">
+                    <tr>
+                        <td><label for="Name">Satellite Image Name: </label></td>
+                        <td><input type="text" name="Name" id="InputName" required=required /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="ymin">minX: </label></td>
+                        <td><input type="number" name="ymin" id="Inputymin" required=required /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="xmin">minY: </label></td>
+                        <td><input type="number" name="xmin" id="Inputxmin" required=required /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="ymax">maxX: </label></td>
+                        <td><input type="number" name="ymax" id="Inputymax" required=required /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="xmax">maxY: </label></td>
+                        <td><input type="number" name="xmax" id="Inputxmax" required=required /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="MinLevel">Minimum Zoomlevel: </label></td>
+                        <td><input type="number" name="MinLevel" id="InputMinLevel" value="6" required=required /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="MaxLevel">Maximum Zoomlevel: </label></td>
+                        <td><input type="text" name="MaxLevel" id="InputMaxLevel" value="13" required=required /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="InputPublished">Published UTC Date: </label></td>
+                        <td><input type="date" name="InputPublished" id="InputPublished" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="IsCloudyCheckBox">Is Cloudy?: </label></td>
+                        <td><input type="checkbox" name="IsCloudyCheckBox" id="IsCloudyCheckBox" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="IsForestLawCheckBox">Is Forest Law?: </label></td>
+                        <td><input type="checkbox" name="IsForestLawCheckBox" id="IsForestLawCheckBox" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Region</label></td>
+                        <td><select id="regionSelect"></select></td>
+                    </tr>
+
+                </table>
+                <input type="submit" value="Save" id="SaveEditionButton" />
+                <input type="submit" value="Cancel" id="CancelEditionButton" />
+            </form>
+        </div>
+
+        <br />
+  
+        <h4>List of Satellite Images</h4>
+        <table border="1" cellpadding="6" cellspacing="0">
+            <thead>
+                <tr style="background-color: #cecece; font-size:13px; font-weight:bold; text-align:center;">
+                    <td>Id</td>
+                    <td>UTC Date</td>
+                    <td>Clouded?</td>
+                    <td>Otbn?</td>
+                    <td>Name</td>
+                    <td>Min X</td>
+                    <td>Max X</td>
+                    <td>Min Y</td>
+                    <td>Max Y</td>
+                    <td>Min Zoom</td>
+                    <td>Max Zoom</td>
+                    <td>Region</td>
+                    <td>***</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody id="SatelliteImagesTable"></tbody>
+        </table>
+
+        <a href="index.html">back</a>
+ 
+        <script>
+
+            $('#ShowLoadedImages').click(function () {
+                ListUnzippedImages();
+            });
+            $('#SaveEditionButton').click(function () {
+                SaveEditionButton();
+            });
+            $('#CancelEditionButton').click(function () {
+                CancelEditionButton();
+            });
+
+            function getAuthString() {
+                return "Basic " + $.base64Encode(document.getElementById("tbUsername").value + ":" + document.getElementById("tbPassword").value);
+            }
+
+            //Load Tables
+            function getRegionsSelect(action) {
+                //Cargo el regionSelect
+                $.ajax({
+                    type: "GET",
+                    url: "../api/region/getall",
+                    contentType: "application/json ; charset=utf-8",
+                    //dataType: "json",
+                    success: function (items) {
+                        $.each(items, function (i, item) {
+                            if (action == "add") {
+                                $('#regionSelect').append($('<option>', {
+                                    value: item.Id,
+                                    text: item.Name
+                                }));
+                            }
+                        });
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(errorThrown);
+                    }
+                });
+            }
+            function ListUnzippedImages()
+            {
+                $('#SatelliteImagesTable').html('');
+
+                $.ajax({
+                    type: "POST",
+                    url: "../api/satelliteimages/listUnzippedImages",
+                    contentType: "application/json ; charset=utf-8",
+                    success: function (result) {
+                        LoadServerImages();
+                        $(result).each(function () {
+                            var html =
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;">' + $(this)[0].toString() + '</td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"><a href="#" title="UnZip Image" onclick="unzipImage(\'' + $(this)[0] + '\');"><img style="width:20px" src="../Images/zip.png" /></a></td>' +
+                            '<td style="text-align:center;"> - </td>';
+                            $('<tr></tr>').html(html).appendTo('#SatelliteImagesTable'); 
+                        });
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(errorThrown);
+                    }
+                });
+            }
+            function LoadServerImages() {
+                $.ajax({
+                    type: "POST",
+                    url: "../api/satelliteimages/listImages",
+                    dataType: "json",
+                    contentType: "application/json ; charset=utf-8",
+                    success: function (result) {
+                        LoadSatelliteImages();
+                        $(result).each(function () {
+                            var html =
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;">' + $(this)[0].toString() + '</td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"> - </td>' +
+                            '<td style="text-align:center;"><a href="#" title="Add Image" onclick="addImage(\'' + $(this)[0] + '\');"><img  src="../Images/add.png" /></a></td>' +
+                            '<td style="text-align:center;"> - </td>';
+                            $('<tr></tr>').html(html).appendTo('#SatelliteImagesTable');
+                        });
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(errorThrown);
+                    }
+                });
+            }
+            function LoadSatelliteImages() {
+
+                $.ajax({
+                    type: "GET",
+                    url: "../api/satelliteimages/all",
+                    contentType: "application/json ; charset=utf-8",
+                    success: function (result) {
+                        $(result).each(function () {
+                            var utcDate = new Date(parseInt($(this).attr('Published').substr(6))).toLocaleDateString();
+                            var html =
+                             '<td>' + $(this).attr('Id') + '</td>'
+                            + '<td>' + utcDate + '</td>'
+                            + '<td>' + $(this).attr('IsCloudy') + '</td>'
+                            + '<td>' + $(this).attr('IsForestLaw') + '</td>'
+                            + '<td>' + $(this).attr('Name') + '</td>'
+                            + '<td>' + $(this).attr('xmin') + '</td>'
+                            + '<td>' + $(this).attr('xmax') + '</td>'
+                            + '<td>' + $(this).attr('ymin') + '</td>'
+                            + '<td>' + $(this).attr('ymax') + '</td>'
+                            + '<td>' + $(this).attr('MinLevel') + '</td>'
+                            + '<td>' + $(this).attr('MaxLevel') + '</td>'
+                            + '<td>' + $(this).attr('RegionId') + '</td>'
+                            + '<td style="text-align:center;"><a href="#" onclick = "editImage(' + $(this).attr('Id') + ');" title="Edit Image"><img src="../Images/edit.png" /></a></td>'
+                            + '<td style="text-align:center;"><a href="#" onclick = "deleteImage(' + $(this).attr('Id') + ');" title="Delete Image"><img src="../Images/delete.png" /></a></td>';
+                            $('<tr></tr>').html(html).appendTo('#SatelliteImagesTable');
+                        });
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(errorThrown);
+                    }
+                });
+            }
+
+            //Edit forms
+            var Id = 0;
+            function editImage(id) {
+                LoadEditInputs(id);
+            }
+            function LoadEditInputs(id)
+            {
+                //Load edit inputs
+                $.ajax({
+                    type: "POST",
+                    url: "../api/satelliteimages/getById",
+                    data: JSON.stringify(id),
+                    dataType: "json",
+                    contentType: "application/json ; charset=utf-8",
+                    success: function (result) {
+                        $(result).each(function () {
+                            Id = $(this).attr('Id');
+                            $('#InputPublished').val(getDate(new Date(parseInt($(this).attr('Published').substr(6)))));
+                            $('#InputPublished').val(getDate(new Date(parseInt($(this).attr('Published').substr(6)))));
+                            $('#InputName').val($(this).attr('Name'));
+                            $('#IsCloudyCheckBox').prop('checked', ($(this).attr('IsCloudy')));
+                            $('#IsForestLawCheckBox').prop('checked', ($(this).attr('IsForestLaw')));
+                            $('#Inputxmin').val($(this).attr('xmin'));
+                            $('#Inputxmax').val($(this).attr('xmax'));
+                            $('#Inputymin').val($(this).attr('ymin'));
+                            $('#Inputymax').val($(this).attr('ymax'));
+                            $('#InputMinLevel').val($(this).attr('MinLevel'));
+                            $('#InputMaxLevel').val($(this).attr('MaxLevel'));
+                            $('#regionSelect').val($(this).attr('RegionId'));
+                            $('#editDiv').show();
+                        });
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(errorThrown);
+                    }
+                });
+            }
+            function SaveEditionButton() {
+                var xmin = $('#Inputxmin').val();
+                var xmax = $('#Inputxmax').val();
+                var ymin = $('#Inputymin').val();
+                var ymax = $('#Inputymax').val();
+                    var wkt = "POLYGON((" + xmin + " " + ymin + ", " + xmax + " " + ymin + ", " + xmax + " " + ymax + ", " + xmin + " " + ymax + ", " + xmin + " " + ymin + "))";
+
+                    var satelliteimage = new Object();
+                    satelliteimage.Id = Id;
+                    satelliteimage.Name = $("#InputName").val();
+                    satelliteimage.Wkt = wkt;
+                    satelliteimage.UrlTileCache = $("#UrlTilecache").val();
+                    satelliteimage.MinLevel = $("#InputMinLevel").val();
+                    satelliteimage.MaxLevel = $("#InputMaxLevel").val();
+                    satelliteimage.IsCloudy = $('#IsCloudyCheckBox').is(':checked');
+                    satelliteimage.IsForestLaw = $('#IsForestLawCheckBox').is(':checked');
+                    satelliteimage.RegionId = $('#regionSelect').val();
+                    var published = new Date($("#InputPublished").val());
+                    if (!isNaN(published))
+                        satelliteimage.Published = "\/Date(" + formatUTCDate(published) + ")\/";
+
+                    var name = $("#InputName").val();
+                    if (name == "") {
+                        alert("Error: Give a satellite image name");
+                        return false;
+                    }
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/satelliteimages/update",
+                        beforeSend: function (xhr) {
+                            xhr.setRequestHeader("Authorization", getAuthString());
+                        },
+                        data: JSON.stringify(satelliteimage),
+                        contentType: "application/json ; charset=utf-8",
+                        dataType: "json",
+                        success: function () {
+                            alert("Congratulations, satelliteimage is added.");
+                            $('#editDiv').hide();
+                            ListUnzippedImages()
+                        },
+                        error: function (xhr, textStatus, errorThrown) {
+                            alert("error, something is wrong adding satelliteimage " + name);
+                        }
+                    });
+                    return false;
+            }
+            function CancelEditionButton() {
+                $('#Inputxmin').val("");
+                $('#Inputxmax').val("");
+                $('#Inputymin').val("");
+                $('#Inputymax').val("");
+                $("#InputName").val("");
+                $("#InputMinLevel").val("");
+                $("#InputMaxLevel").val("");
+                $('#IsCloudyCheckBox').is(':checked');
+                $('#IsForestLawCheckBox').is(':checked');
+                $("#InputPublished").val("");
+                $('#editDiv').hide();
+            }
+
+            //Add Images from server
+            function addImage(imageName) {
+                $.ajax({
+                    type: "POST",
+                    url: "../api/satelliteimages/importandaddimage",
+                    data: JSON.stringify(imageName),
+                    dataType: "json",
+                    contentType: "application/json ; charset=utf-8",
+                    success: function (result) {
+                        ListUnzippedImages();
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(errorThrown);
+                    }
+                });
+            }
+            function unzipImage(zipName)
+            {
+                $.ajax({
+                    type: "POST",
+                    url: "../api/satelliteimages/unzipImages",
+                    data: JSON.stringify(zipName),
+                    dataType: "json",
+                    contentType: "application/json ; charset=utf-8",
+                    success: function (result) {
+                        ListUnzippedImages();
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(errorThrown);
+                    }
+                });
+            }
+
+            //Delete Image
+            function deleteImage(id) {
+                if (id == "") {
+                    alert("error: cannot select Satellite Image Id");
+                    return false;
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "/api/satelliteimages/del",
+                    data: JSON.stringify(id),
+                    contentType: "application/json ; charset=utf-8",
+                    dataType: "json",
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("Authorization", getAuthString());
+                    },
+                    success: function () {
+                        alert("Congratulations, satellite image is deleted.");
+                        ListUnzippedImages();
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert("error, satellite image does not exist? " + id);
+                    }
+                });
+                return false;
+            }
+
+            //Date functions
+            function getDate(date) {
+                var yyyy = date.getFullYear().toString();
+                var mm = (date.getMonth() + 1).toString();
+                var dd = date.getDate().toString();
+
+                // CONVERT mm AND dd INTO chars
+                var mmChars = mm.split('');
+                var ddChars = dd.split('');
+
+                // CONCAT THE STRINGS IN YYYY-MM-DD FORMAT
+                var datestring = yyyy + '-' + (mmChars[1] ? mm : "0" + mmChars[0]) + '-' + (ddChars[1] ? dd : "0" + ddChars[0]);
+                return datestring;
+            }
+            function formatUTCDate(d) {
+                var str = Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds(), 0);
+                return str;
+            };
+
+            getRegionsSelect("add");
+
+        </script>
+    </body> 
+</html>

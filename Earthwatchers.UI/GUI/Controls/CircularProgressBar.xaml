@@ -1,0 +1,48 @@
+﻿<UserControl x:Name="userControl" x:Class="Earthwatchers.UI.GUI.Controls.CircularProgressBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+    <Grid>
+        <Path x:Name="pathRoot" Stroke="{Binding SegmentColor, ElementName=userControl}" StrokeThickness="{Binding StrokeThickness, ElementName=userControl}" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigureCollection>
+                            <PathFigure x:Name="pathFigure">
+                                <PathFigure.Segments>
+                                    <PathSegmentCollection>
+                                        <ArcSegment x:Name="arcSegment" SweepDirection="Clockwise" />
+                                    </PathSegmentCollection>
+                                </PathFigure.Segments>
+                            </PathFigure>
+                        </PathFigureCollection>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+    </Grid>
+</UserControl>
+
+    <!--FORMAS DE MOSTRAR LA PROGRESS BAR CIRCULAR-->
+    
+<!--<Grid x:Name="LayoutRoot" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <controls:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" SegmentColor="#FF878889" StrokeThickness="25" Percentage="100" />
+        <controls:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Percentage="33" SegmentColor="#026873" StrokeThickness="25" />
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <controls:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Radius="15" StrokeThickness="20" SegmentColor="#FF878889" Percentage="100" />
+        <controls:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Percentage="33" StrokeThickness="25" SegmentColor="#026873" />
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <controls:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" StrokeThickness="38" SegmentColor="#FF878889" Percentage="100" Radius="19" />
+        <controls:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Percentage="33" StrokeThickness="38" SegmentColor="#026873" Radius="19" />
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <controls:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Percentage="33" SegmentColor="#026873" StrokeThickness="25" />
+        <controls:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Percentage="33" SegmentColor="White" StrokeThickness="2" Radius="20" />
+        <controls:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Percentage="33" SegmentColor="White" StrokeThickness="2" />
+        <controls:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Percentage="33" SegmentColor="White" StrokeThickness="2" Radius="30" />
+        </Grid>
+</Grid>-->

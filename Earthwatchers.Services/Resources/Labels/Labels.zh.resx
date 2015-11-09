@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Congrats" xml:space="preserve">
+    <value>恭喜！</value>
+  </data>
+  <data name="GuardiansGreenpeace" xml:space="preserve">
+    <value>地球卫士 -绿色和平</value>
+  </data>
+  <data name="IncorrectReport" xml:space="preserve">
+    <value>不正确报告</value>
+  </data>
+  <data name="IncorrectReport2" xml:space="preserve">
+    <value>绿色和平已经检查了你的报告，我们确定你的报告是正确的。&lt;br /&gt;&lt;br /&gt;&lt;b&gt;这是什么意思？&lt;/b&gt;&lt;br&gt;
+     经过我们专家的复查，你报告的绿色的（安全）林地里有毁林活动。&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+  但是不用担心，你会得到更多经验，训练你的眼睛更好的辨别毁林和安全。&lt;br /&gt;&lt;br /&gt;
+    &lt;b&gt;现在将发生什么？&lt;/b&gt;&lt;br /&gt;
+    这时可以举报这块林地。在“森林卫士”里变成红色。 
+  如果你点击[举报]键，而不是[报告]键。&lt;br /&gt;&lt;br /&gt;
+   当你看见表格，开始写举报信，点击[提交]把你的投诉发给相关的管理部门。&lt;br /&gt;&lt;br /&gt;
+                                    &lt;b&gt;帮助你提高你的报告质量的小提示&lt;/b&gt;&lt;br /&gt;
+                                    &lt;ul&gt;
+                                        &lt;li&gt;你可以玩迷你游戏一从[帮助]菜单里学习区分安全和毁林地区。&lt;/li&gt;
+                                        &lt;li&gt;你可以从[帮助]菜单回去看预辅导课。&lt;/li&gt;
+                                        &lt;li&gt;你可以翻阅别的已经通过审核的林地（红色）去比较正确的报告。&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    不要放下你的武器，继续为了保护森林发送报告吧！
+                                    &lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="IncorrectReport3" xml:space="preserve">
+    <value>绿色和平已经检查了你的报告，我们确定你的报告是正确的。&lt;br /&gt;&lt;br /&gt;&lt;b&gt;这是什么意思？&lt;/b&gt;&lt;br&gt;
+  经过我们专家的复查，你报告的黄色的（毁林）林地里没有毁林活动，&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;或者这个毁林活动早于{0}年，那时森林法还没有颁布。
+   &lt;b&gt;但是没有解释，为什么分派给我一块林地存在早于{1}年的毁林活动？&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+  有时候，“守护着”分派到离保护区和毁林或绿色区域边界很近的林地。这些林地看上去很像在保护区内，实际上林地的大部分不在保护区内。 &lt;br /&gt;&lt;br /&gt;
+   我们正在解决这个问题。如果你遇到这种情况，我们非常抱歉，给你带来不便！&lt;br  &lt;b&gt;现在会发生什么？&lt;/b&gt;&lt;br /&gt;
+    从现在开始，林地将变成绿色。有了新的卫星图片，“森林卫士”就可以继续观察这块林地了，你可以查看。&lt;br /&gt;&lt;br /&gt;
+                                    &lt;b&gt;帮助你提高你的报告质量的小提示&lt;/b&gt;&lt;br /&gt;
+                                    &lt;ul&gt;
+                                        &lt;li&gt;你可以玩迷你游戏一从[帮助]菜单里学习区分安全和毁林地区。&lt;/li&gt;
+                                        &lt;li&gt;你可以从[帮助]菜单回去看预辅导课。&lt;/li&gt;
+                                        &lt;li&gt;你可以翻阅别的已经通过审核的林地（红色）去比较正确的报告。&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    不要放下你的武器，继续为了保护森林发送报告吧！
+                                    &lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="LandVerifications" xml:space="preserve">
+    <value>你来30次查看你的林地。</value>
+  </data>
+  <data name="LandVerifications2" xml:space="preserve">
+    <value>恭喜，其他30个“森林卫士”已经核实了你林地的报告。</value>
+  </data>
+  <data name="LandVerifications3" xml:space="preserve">
+    <value>从现在开始绿色和平将核实报告！</value>
+  </data>
+  <data name="LandVerifications4" xml:space="preserve">
+    <value>点击这里继续保护森林</value>
+  </data>
+  <data name="LandVerifications5" xml:space="preserve">
+    <value>保护森林</value>
+  </data>
+  <data name="LandVerifications6" xml:space="preserve">
+    <value>这个消息被发送到</value>
+  </data>
+  <data name="LandVerifications7" xml:space="preserve">
+    <value>如果你不想以后接到通知，你可以进入使用者控制面板，禁用通知。</value>
+  </data>
+  <data name="LandVerifications8" xml:space="preserve">
+    <value>绿色和平版权所有。</value>
+  </data>
+  <data name="LandVerified" xml:space="preserve">
+    <value>林地核实</value>
+  </data>
+  <data name="LandVerified2" xml:space="preserve">
+    <value>绿色和平已经检查了你的报告，我们确定你的报告是错误的。&lt;br /&gt;&lt;br /&gt;&lt;b&gt;这是什么意思？&lt;/b&gt;&lt;br&gt;
+ 你报告的黄色（毁林）林地有毁林活动。&lt;/b&gt;. 事实应该报告，根据森林法我们不允许在保护与区毁林。&lt;br /&gt;&lt;br /&gt;
+从现在起，你的林地将开启举报功能。在“森林卫士”中这块林地将呈现红色，点击他，再点击[报告]键，你将开启[报告]键。&lt;br /&gt;&lt;br /&gt;
+当你看见这个表格，写完投诉信并点击[提交]键，你的投诉将发送给相关管理部门。
+&lt;br /&gt;&lt;br /&gt;
+继续为保护森林发送报告！</value>
+  </data>
+  <data name="LawYear" xml:space="preserve">
+    <value>2008年</value>
+  </data>
+  <data name="MailBienvenidaAsunto" xml:space="preserve">
+    <value>欢迎来到“森林卫士”</value>
+  </data>
+  <data name="MailBienvenidaBoton" xml:space="preserve">
+    <value>保护森林</value>
+  </data>
+  <data name="MailBienvenidaBotonTooltip" xml:space="preserve">
+    <value>点击这里开始保护森林</value>
+  </data>
+  <data name="MailBienvenidaCuerpo" xml:space="preserve">
+    <value>开始玩，点击以下按键！                                      &lt;br&gt;&lt;/br&gt;                                                       &lt;b&gt;小提示&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt; 点击[新林地]&lt;/li&gt;你可以得到新林地
+&lt;li&gt; 评价其他“森林卫士”的林地，保住他们报告&lt;/li&gt;
+&lt;li&gt; 完成所有辅导课&lt;/li&gt;
+&lt;li&gt; 每天多次登录得到更多分数&lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="MailBienvenidaTitulo" xml:space="preserve">
+    <value>你准备好了成为一个森林“森林卫士”！</value>
+  </data>
+  <data name="NoMoreLands" xml:space="preserve">
+    <value>该地区已-完成感谢您的参与和其他监护人。不久，我们将有一个新的卫星图像，继续监视。同时，您可以检查其他区域。</value>
+  </data>
+  <data name="Now" xml:space="preserve">
+    <value>现在</value>
+  </data>
+  <data name="ReportVerifiedCorrect" xml:space="preserve">
+    <value>绿色和平已经检查了你的报告，我们确定你的报告是错误的。&lt;br /&gt;&lt;br /&gt;&lt;b&gt;这是什么意思？&lt;/b&gt;&lt;br&gt;
+  你报告的绿色（安全）林地没有毁林活动。&lt;/b&gt;. 
+有了新的卫星图片，“森林卫士”就可以继续观察这块林地了。 
+ 因此你可以再察看有没有毁林，&lt;br /&gt;&lt;br /&gt;继续为保护森林发送报告。</value>
+  </data>
+  <data name="VerificationReport" xml:space="preserve">
+    <value>核实报告</value>
+  </data>
+</root>

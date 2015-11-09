@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Guardians Admin</title>
+    <link href="uploadfile.css" rel="stylesheet" />
+    <script src="jquery-1.6.2.min.js"></script>
+    <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="jquery.base64.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function getAuthString() {
+            return "Basic " + $.base64Encode(document.getElementById("tbUsername").value + ":" + document.getElementById("tbPassword").value);
+        }
+
+        var regionList = new Array();
+
+        function getRegionsSelect(action) {
+            //Cargo el region
+            $.ajax({
+                type: "GET",
+                url: "../api/region/getall",
+                contentType: "application/json ; charset=utf-8",
+                success: function (items) {
+                    $.each(items, function (i, item) {
+                        regionList[item.Id] = item.Name;
+                            $('#regionSelect').append($('<option>', {
+                                value: item.Id,
+                                text: item.Name
+                            }));
+                            $('#newRegionSelect').append($('<option>', {
+                                value: item.Id,
+                                text: item.Name
+                            }));
+                    });
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+
+        function LoadTexts() { 
+            $("#textstable tr").remove();
+            $('#loadinggif').show();
+            $.ajax({
+                type: "GET",
+                url: "../api/customsharetext/getall",
+                contentType: "application/json ; charset=utf-8",
+                success: function (items) {
+                    $.each(items, function (i, item) {
+                        var html = '<td>' + item.Id + '</td>'
+                       + '<td style="text-align: center; padding: 0px;"><p>' + regionList[item.RegionId] + '</p></td>'
+                       + '<td style="text-align: center; padding: 0px;"><p>' + item.Language + '</p></td>'
+                       + '<td style="padding: 0px;"><p style="width: 200px; margin: 5px;">' + item.ShareOk + '</p></td>'
+                       + '<td style="padding: 0px;"><p style="width: 200px; margin: 5px;">' + item.ShareAlert + '</p></td>'
+                       + '<td style="padding: 0px;"><p style="width: 200px; margin: 5px;">' + item.ShareAlertFinca + '</p></td>'
+                       + '<td style="padding: 0px;"><p style="width: 200px; margin: 5px;">' + item.HashTagRegister + '</p></td>'
+                       + '<td style="padding: 0px;"><p style="width: 200px; margin: 5px;">' + item.HashTagReportConfirmed + '</p></td>'
+                       + '<td style="padding: 0px;"><p style="width: 200px; margin: 5px;">' + item.HashTagCheck + '</p></td>'
+                       + '<td style="padding: 0px;"><p style="width: 200px; margin: 5px;">' + item.HashTagVerification + '</p></td>'
+                       + '<td style="padding: 0px;"><p style="width: 200px; margin: 5px;">' + item.HashTagDenounce + '</p></td>'
+                       + '<td style="padding: 0px;"><p style="width: 200px; margin: 5px;">' + item.HashTagRanking + '</p></td>'
+                       + '<td style="padding: 0px;"><p style="width: 200px; margin: 5px;">' + item.HashTagTop1 + '</p></td>'
+                       + '<td style="padding: 0px;"><p style="width: 200px; margin: 5px;">' + item.HashTagContestWon + '</p></td>'
+                       + '<td style="padding: 0px;"><a href="#" onclick="editText(' + $(this).attr('Id') + ');" title="Edit Text">&laquo;&laquo;&laquo;&laquo</a></td>'
+                       + '<td style="padding: 0px;"><a href="#" onclick="deleteText(' + $(this).attr('Id') + ');" title="Delete Text">X</a></td>';
+
+                        $('<tr></tr>').html(html).appendTo('#textstable');
+                    });
+                    $('#loadinggif').hide();
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    $('#loadinggif').hide();
+                    alert(errorThrown);
+                }
+            });
+        }
+
+        function editText(id) {
+
+            $('#add').addClass("collapsed");
+            $('#editBox').removeClass("collapsed");
+            $('#editBox').addClass("visible");
+
+            //Cargo los campos
+            $.ajax({
+                type: "GET",
+                url: "../api/customsharetext/getbyid/id=" + id,
+                contentType: "application/json ; charset=utf-8",
+                success: function (texts) {
+                    $(texts).each(function () {
+                        idInput.value = $(this).attr('Id');
+                        newRegionSelect.value = $(this).attr('RegionId');
+                        newLanguageSelect.value = $(this).attr('Language');
+                        newShareOkInput.value = $(this).attr('ShareOk');
+                        newShareAlertInput.value = $(this).attr('ShareAlert');
+                        newShareAlertFincaInput.value = $(this).attr('ShareAlertFinca');
+                        newHashTagRegisterInput.value = $(this).attr('HashTagRegister');
+                        newHashTagReportConfirmedInput.value = $(this).attr('HashTagReportConfirmed');
+                        newHashTagCheckInput.value = $(this).attr('HashTagCheck');
+                        newHashTagVerificationInput.value = $(this).attr('HashTagVerification');
+                        newHashTagDenounceInput.value = $(this).attr('HashTagDenounce');
+                        newHashTagRankingInput.value = $(this).attr('HashTagRanking');
+                        newHashTagTop1Input.value = $(this).attr('HashTagTop1');
+                        newHashTagContestWonInput.value = $(this).attr('HashTagContestWon');
+                    })
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+
+        function deleteText(id)
+        {
+            $.ajax({
+                type: "GET",
+                url: "../api/customsharetext/delete/id=" + id,
+                contentType: "application/json ; charset=utf-8",
+                success: function () {
+                    alert("Deleted!");
+                    LoadTexts();
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+
+            getRegionsSelect("add");
+
+            //Add Share Text
+            $("#addShareText").click(function () {
+                var regionId = $('#regionSelect').val();
+                var language = $('#languageSelect').val();
+                var shareOk = $('#shareOkInput').val();
+                var shareAlert = $('#shareAlertInput').val();
+                var shareAlertFinca = $('#shareAlertFincaInput').val();
+                var hashTagRegister = $('#hashTagRegisterInput').val();
+                var hashTagReportConfirmed = $('#hashTagReportConfirmedInput').val();
+                var hashTagCheck = $('#hashTagCheckInput').val();
+                var hashTagVerification = $('#hashTagVerificationInput').val();
+                var hashTagDenounce = $('#hashTagDenounceInput').val();
+                var hashTagRanking = $('#hashTagRankingInput').val();
+                var hashTagTop1 = $('#hashTagTop1Input').val();
+                var hashTagContestWon = $('#hashTagContestWonInput').val();
+
+                var shareText= new Object();
+                shareText.RegionId = regionId;
+                shareText.ShareOk = shareOk;
+                shareText.ShareAlert = shareAlert;
+                shareText.ShareAlertFinca = shareAlertFinca;
+                shareText.HashTagRegister = hashTagRegister;
+                shareText.HashTagReportConfirmed = hashTagReportConfirmed;
+                shareText.HashTagCheck = hashTagCheck;
+                shareText.HashTagVerification = hashTagVerification;
+                shareText.HashTagDenounce = hashTagDenounce;
+                shareText.HashTagTop1 = hashTagTop1;
+                shareText.HashTagRanking = hashTagRanking;
+                shareText.HashTagContestWon = hashTagContestWon;
+                shareText.Language = language;
+
+                $.ajax({
+                    type: "POST",
+                    url: "../api/customsharetext",
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("Authorization", getAuthString());
+                    },
+                    data: JSON.stringify(shareText),
+                    contentType: "application/json ; charset=utf-8",
+                    dataType: "json",
+                    success: function () {
+
+                        //limpio los inputs
+                        shareOkInput.value = "";
+                        shareOkInput.value = "";
+                        shareAlertInput.value = "";
+                        shareAlertFincaInput.value = "";
+                        hashTagRegisterInput.value = "";
+                        hashTagReportConfirmedInput.value = "";
+                        hashTagCheckInput.value = "";
+                        hashTagVerificationInput.value = "";
+                        hashTagDenounceInput.value = "";
+                        hashTagRankingInput.value = "";
+                        hashTagTop1Input.value = "";
+                        hashTagContestWonInput.value = "";
+
+                        alert("Congratulations, Share Text added.");
+                        LoadTexts();
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert("error, something went wrong adding the Text");
+                    }
+                });
+            });
+
+            $("#editTextsEnded").click(function () {
+
+                //Cargo los valores
+                var id = $('#idInput').val();
+                var regionId = $('#newRegionSelect').val();
+                var newLanguageSelect = $('#newLanguageSelect').val();
+                var newShareOkInput = $('#newShareOkInput').val();
+                var newShareAlertInput = $('#newShareAlertInput').val();
+                var newShareAlertFincaInput = $('#newShareAlertFincaInput').val();
+                var newHashTagRegisterInput = $('#newHashTagRegisterInput').val();
+                var newHashTagReportConfirmedInput = $('#newHashTagReportConfirmedInput').val();
+                var newHashTagCheckInput = $('#newHashTagCheckInput').val();
+                var newHashTagVerificationInput = $('#newHashTagVerificationInput').val();
+                var newHashTagDenounceInput = $('#newHashTagDenounceInput').val();
+                var newHashTagRankingInput = $('#newHashTagRankingInput').val();
+                var newHashTagTop1Input = $('#newHashTagTop1Input').val();
+                var newHashTagContestWonInput = $('#newHashTagContestWonInput').val();
+
+                //Creo el objeto a enviar
+                var shareText = new Object();
+                shareText.Id = id;
+                shareText.RegionId = regionId;
+                shareText.Language = newLanguageSelect;
+                shareText.ShareOk = newShareOkInput;
+                shareText.ShareAlert = newShareAlertInput;
+                shareText.ShareAlertFinca = newShareAlertFincaInput;
+                shareText.HashTagRegister = newHashTagRegisterInput;
+                shareText.HashTagReportConfirmed = newHashTagReportConfirmedInput;
+                shareText.HashTagCheck = newHashTagCheckInput;
+                shareText.HashTagVerification = newHashTagVerificationInput;
+                shareText.HashTagDenounce = newHashTagDenounceInput;
+                shareText.HashTagRanking = newHashTagRankingInput;
+                shareText.HashTagTop1 = newHashTagTop1Input;
+                shareText.HashTagContestWon = newHashTagContestWonInput;
+
+                $.ajax({
+                    type: 'POST',
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("Authorization", getAuthString());
+                    },
+                    url: "../api/customsharetext/edit",
+                    data: JSON.stringify(shareText),
+                    contentType: "application/json ; charset=utf-8",
+                    dataType: "json",
+                    success: function () {
+                        LoadTexts();
+                        $('#editBox').removeClass("visible");
+                        $('#editBox').addClass("collapsed");
+                        $('#add').removeClass("collapsed");
+
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert("error, something went wrong editing text");
+                        $('#editBox').removeClass("visible");
+                        $('#editBox').addClass("collapsed");
+                        $('#add').removeClass("collapsed");
+                    }
+                });
+            });
+
+            $("#LoadTextsButton").click(function () {
+                LoadTexts();
+            });
+        });
+
+    </script>
+    <style>
+       
+        body {
+            font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+        }
+
+        .tdnumber {
+            text-align: right;
+        }
+        .label {
+            float: left;
+            width: 150px;
+        }
+
+        .visible {
+            visibility: visible;
+            display: block;
+        }
+
+        .collapsed {
+            visibility: collapse;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h3>Administrator - Custom Share Texts</h3>
+    <br />
+    username:
+    <input type="text" id="tbUsername" value="" /><br />
+    password:
+    <input type="password" id="tbPassword" value="" />
+    <br />
+    <br />
+    <input id="LoadTextsButton" type="button" value="Load Texts" />
+    <br />
+    <div id="add">
+        <h4>Add Share Texts</h4>
+        <div class="label">Share Ok</div>
+        <div><input id="shareOkInput" type="text" /></div>
+        <div class="label">Share Alert</div>
+        <div><input id="shareAlertInput" type="text" /></div>
+        <div class="label">Share Alert Finca</div>
+        <div><input id="shareAlertFincaInput" type="text" /></div>
+        <div class="label">#Register</div>
+        <div><input id="hashTagRegisterInput" type="text" /></div>
+        <div class="label">#Report Confirmed</div>
+        <div><input id="hashTagReportConfirmedInput" type="text" /></div>
+        <div class="label">#Check</div>
+        <div><input id="hashTagCheckInput" type="text" /></div>
+        <div class="label">#Verification</div>
+        <div><input id="hashTagVerificationInput" type="text" /></div>
+        <div class="label">#Denounce</div>
+        <div><input id="hashTagDenounceInput" type="text" /></div>
+        <div class="label">#Ranking</div>
+        <div><input id="hashTagRankingInput" type="text" /></div>
+        <div class="label">#Top1</div>
+        <div><input id="hashTagTop1Input" type="text" /></div>
+        <div class="label">#ContestWon</div>
+        <div><input id="hashTagContestWonInput" type="text" /></div>
+        <div class="label">Language</div>
+        <div>
+            <select id="languageSelect">
+                <option value="es-AR">es-AR</option>
+                <option value="en-CA">en-CA</option>
+                <option value="zh-CN">zh-CN</option>
+            </select>
+        </div>
+        <div class="label">Region</div>
+        <div><select id="regionSelect"></select></div>
+
+        <input id="addShareText" type="button" value="Add" />
+        <br />
+    </div>
+    <br />
+
+    <div id="editBox" class="collapsed">
+        <h4>Edit Share Texts</h4>
+        <div><input id="idInput" type="hidden" contenteditable="false" /></div>
+        <div class="label">ShareOk</div>
+        <div><input id="newShareOkInput" type="text"/></div>
+        <div class="label">ShareAlert</div>
+        <div><input id="newShareAlertInput" type="text" /></div>
+        <div class="label">ShareAlertFinca</div>
+        <div><input id="newShareAlertFincaInput" type="text" /></div>
+        <div class="label">#Register</div>
+        <div><input id="newHashTagRegisterInput" type="text" /></div>
+        <div class="label">#Report Confirmed</div>
+        <div><input id="newHashTagReportConfirmedInput" type="text" /></div>
+        <div class="label">#Check</div>
+        <div><input id="newHashTagCheckInput" type="text" /></div>
+        <div class="label">#Verification</div>
+        <div><input id="newHashTagVerificationInput" type="text" /></div>
+        <div class="label">#Denounce</div>
+        <div><input id="newHashTagDenounceInput" type="text" /></div>
+        <div class="label">#Ranking</div>
+        <div><input id="newHashTagRankingInput" type="text" /></div>
+        <div class="label">#Top1</div>
+        <div><input id="newHashTagTop1Input" type="text" /></div>
+        <div class="label">#ContestWon</div>
+        <div><input id="newHashTagContestWonInput" type="text" /></div>
+        <div class="label">Language</div>
+        <div><select id="newLanguageSelect">
+                 <option value="es-AR">es-AR</option>
+                 <option value="en-CA">en-CA</option>
+                 <option value="zh-CN">zh-CN</option>
+            </select></div>
+        <div class="label">Region</div>
+        <div><select id="newRegionSelect"></select></div>
+
+        <input id="editTextsEnded" type="button" value="Save Changes" />
+    </div>
+
+                                
+    <h4>Text's List</h4>  <img id="loadinggif" src="../css/fancybox_loading.gif" style="display: none; margin-top: 20px" />
+    <table border="1" cellpadding="7" cellspacing="0">
+        <thead>
+            <tr style="background-color: #cecece; text-align: center; font-weight: bold;">
+                <td>Id</td>
+                <td>Region</td>
+                <td>Language</td>
+                <td>ShareOk</td>
+                <td>ShareAlert</td>
+                <td>ShareAlertFinca</td>
+                <td>#Register</td>
+                <td>#ReportConfirmed</td>
+                <td>#Check</td>
+                <td>#Verification</td>
+                <td>#Denounce</td>
+                <td>#Ranking</td>
+                <td>#Top1</td>
+                <td>#ContestWon</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+        </thead>
+        <tbody id="textstable"></tbody>
+    </table>
+    <br />
+
+
+    <a href="index.html">back</a>
+
+</body>
+
+</html>

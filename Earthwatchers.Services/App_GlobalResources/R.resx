@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cartel1t1" xml:space="preserve">
+    <value>Hola Guardián,</value>
+  </data>
+  <data name="Cartel1t10" xml:space="preserve">
+    <value>INSTALAR SILVERLIGHT</value>
+  </data>
+  <data name="Cartel1t11" xml:space="preserve">
+    <value>Estás a punto de convertirte en Guardián!</value>
+  </data>
+  <data name="Cartel1t12" xml:space="preserve">
+    <value>No puedo instalarlo, pero quiero participar</value>
+  </data>
+  <data name="Cartel1t2" xml:space="preserve">
+    <value>Si usas Chrome 45, Microsoft Edge o estás accediendo con un smartphone / tablet, por favor ayudanos probando el preview de</value>
+  </data>
+  <data name="Cartel1t3" xml:space="preserve">
+    <value>, sino seguí las instrucciones para instalar Silverlight!</value>
+  </data>
+  <data name="Cartel1t4" xml:space="preserve">
+    <value>Todavía estamos desarrollando esta última versión que usa las tecnologías web más avanzadas que proveerá una experiencia superior en todos los navegadores, teléfonos móviles y tablets. 
+
+Tu feedback nos ayudara mejorar la nueva plataforma, después de probar, por favor completa nuestra</value>
+  </data>
+  <data name="Cartel1t5" xml:space="preserve">
+    <value>breve encuesta</value>
+  </data>
+  <data name="Cartel1t6" xml:space="preserve">
+    <value>(solamente te llevará 10 minutos) o envianos tus comentarios a</value>
+  </data>
+  <data name="Cartel1t7" xml:space="preserve">
+    <value>- Gracias!</value>
+  </data>
+  <data name="Cartel1t8" xml:space="preserve">
+    <value>(Los datos de desmonte generado durante el testeo de la nueva plataforma solamente se usarán internamente, para evaluar y mejorar el nuevo sistema.)</value>
+  </data>
+  <data name="Cartel1t9" xml:space="preserve">
+    <value>Instalá el plugin the Microsoft Silverlight, sólo lleva unos segundos</value>
+  </data>
+  <data name="Cartel2t2" xml:space="preserve">
+    <value>El explorador que estás usando actualmente, Google Chrome o Microsoft Edge, dejó de ser compatible con la tecnología que usa Guardianes. 
+                                            Para seguir cuidando nuestros bosques te recomendamos que utilices otros como</value>
+  </data>
+  <data name="Cartel2t3" xml:space="preserve">
+    <value>Sin embargo, si no querés cambiar de explorador, podés ayudar probando</value>
+  </data>
+  <data name="Cartel2t4" xml:space="preserve">
+    <value>Todavía estamos desarrollando esta última versión que emplea las tecnologías web más avanzadas. Te brindaremos una experiencia superior en todos los navegadores, teléfonos móviles y tablets.</value>
+  </data>
+  <data name="Cartel2t5" xml:space="preserve">
+    <value>Después de jugar, por favor, completá nuestra</value>
+  </data>
+  <data name="Cartel2t6" xml:space="preserve">
+    <value>Tu opinión es muy importante para poder mejorar la nueva plataforma. ¡Gracias!</value>
+  </data>
+  <data name="Cartel3t1" xml:space="preserve">
+    <value>Instrucciones para seguir usando Guardianes en Chrome en versiones anteriores a 45 (septiembre-2015):</value>
+  </data>
+  <data name="Cartel3t2" xml:space="preserve">
+    <value>Escribí en la barra de búsqueda: chrome://flags/#enable-npapi</value>
+  </data>
+  <data name="Cartel3t3" xml:space="preserve">
+    <value>En la parte superior de la pantalla, aparecerá una opción bajo el título “Habilitar NPAPI”. Hacé click en “Habilitar”.</value>
+  </data>
+  <data name="Cartel3t4" xml:space="preserve">
+    <value>En la parte inferior de la pantalla, hacé click en el botón “Reiniciar Ahora”</value>
+  </data>
+  <data name="Cartel3t5" xml:space="preserve">
+    <value>¡Listo! ¡Ya podés continuar cuidando nuestros bosques!</value>
+  </data>
+  <data name="LoginEmailHint" xml:space="preserve">
+    <value>dirección de email</value>
+  </data>
+  <data name="LoginForgotPassword" xml:space="preserve">
+    <value>Olvidaste tu contraseña?</value>
+  </data>
+  <data name="LoginForgotPasswordTitle" xml:space="preserve">
+    <value>Se te enviará una nueva contraseña por mail</value>
+  </data>
+  <data name="LoginGuardiansImage" xml:space="preserve">
+    <value>Images/guardianes.png</value>
+  </data>
+  <data name="LoginHeader" xml:space="preserve">
+    <value>Ingresá tu dirección de mail para&lt;br /&gt; comenzar a cuidar el bosque!</value>
+  </data>
+  <data name="LoginInvalidEmail" xml:space="preserve">
+    <value>Tenés que escribir una dirección de mail válida</value>
+  </data>
+  <data name="LoginInvalidUserOrPass" xml:space="preserve">
+    <value>El usuario o la contraseña son incorrectos</value>
+  </data>
+  <data name="LoginNextButton" xml:space="preserve">
+    <value>SIGUIENTE &gt;&gt;</value>
+  </data>
+  <data name="LoginPassword" xml:space="preserve">
+    <value>Te pedimos que elijas una contraseña para continuar!</value>
+  </data>
+  <data name="LoginPasswordHint" xml:space="preserve">
+    <value>contraseña</value>
+  </data>
+  <data name="LoginPasswordRecoveryMessage" xml:space="preserve">
+    <value>Te hemos enviado un email.
+        &lt;br /&gt;
+        &lt;br /&gt;
+        Lo vas a recibir en pocos minutos. Seguí las instrucciones indicadas en el mail para resetear tu contraseña.
+        &lt;br /&gt;
+        &lt;br /&gt;
+        Si no recibiste el mail, chequeá las carpetas de correo no deseado. Asegurate que los filtros de tu mail acepten mails desde greenpeace.org
+        &lt;br /&gt;
+        &lt;br /&gt;
+        Muchas Gracias.</value>
+  </data>
+  <data name="LoginPasswordRepeatHint" xml:space="preserve">
+    <value>repetir contraseña</value>
+  </data>
+  <data name="LoginPasswordValidationLength" xml:space="preserve">
+    <value>La contraseña debe tener al menos 5 caracteres.</value>
+  </data>
+  <data name="LoginPasswordValidationMatch" xml:space="preserve">
+    <value>Las contraseñas no coinciden</value>
+  </data>
+  <data name="LoginRegistrationFailed" xml:space="preserve">
+    <value>Ha ocurrido un error. No pudimos finalizar la registración. Por favor contacte a un administrador.</value>
+  </data>
+  <data name="LoginStartButton" xml:space="preserve">
+    <value>COMENZAR</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Guardianes - Iniciar Sesion</value>
+  </data>
+  <data name="LoginUsername" xml:space="preserve">
+    <value>Este es tu nombre de usuario!</value>
+  </data>
+  <data name="LoginVideoTitle" xml:space="preserve">
+    <value>Click aquí para ver el video</value>
+  </data>
+</root>

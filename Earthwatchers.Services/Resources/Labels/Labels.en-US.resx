@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AR" xml:space="preserve">
+    <value>Argentine</value>
+  </data>
+  <data name="BR" xml:space="preserve">
+    <value>Brazil</value>
+  </data>
+  <data name="CN" xml:space="preserve">
+    <value>China</value>
+  </data>
+  <data name="Congrats" xml:space="preserve">
+    <value>Congrats!</value>
+  </data>
+  <data name="GuardiansGreenpeace" xml:space="preserve">
+    <value>Earthwatchers - Greenpeace</value>
+  </data>
+  <data name="IncorrectReport" xml:space="preserve">
+    <value>Incorrect Report</value>
+  </data>
+  <data name="IncorrectReport2" xml:space="preserve">
+    <value>Your plot has been checked by Greenpeace and we have determinated than your report was wrong.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;What this means?&lt;/b&gt;&lt;br&gt;
+     The plot that you reported in Green (safe) was reviewed by our experts who determined that&lt;b&gt;it do have deforestation.&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+  But don't worry, in time you'll gain more experience and train your eye to better identify deforested areas and safe.&lt;br /&gt;&lt;br /&gt;
+    &lt;b&gt;What happens now?&lt;/b&gt;&lt;br /&gt;
+    From this moment, the plot will be able to Denounce. It will be Red in Guardians, 
+  and if you click on it instead of [Report] it would say [Denounce].&lt;br /&gt;&lt;br /&gt;
+    When you see the form, make your denounce and Click [Submit] to relevant authorities to receive your claim.&lt;br /&gt;&lt;br /&gt;
+                                    &lt;b&gt;Tips to enhance your reports&lt;/b&gt;&lt;br /&gt;
+                                    &lt;ul&gt;
+                                        &lt;li&gt;You can play the minigame I from the [Help] menu to learn to differentiate safe areas from deforested.&lt;/li&gt;
+                                        &lt;li&gt;You can return to see the Pre-Tutorial from the [Help] menu.&lt;/li&gt;
+                                        &lt;li&gt;You can review other verified plots (in red) to compare correct reports.&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    Do not drop your arms, continues to report plots forest plots to keep forest safe!
+                                    &lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="IncorrectReport3" xml:space="preserve">
+    <value>Your plot has been checked by Greenpeace and we have determinated than your report was wrong.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;What this means?&lt;/b&gt;&lt;br&gt;
+  The plot that you reported in Yellow (deforestation) was reviewed by our experts who determined that&lt;b&gt;it do not have deforestation.&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;, or that deforestation was earlier than 2008&lt;/b&gt;, when we do not have forest law.&lt;br /&gt;&lt;br /&gt;
+   &lt;b&gt;But there is a disassemble, why did i had a plot assigned with previous deforestation to 2008?&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+   In some cases, Guardians assign plots near the limits between protected zones and deforested or green. When this happends, plots may look like they are in a protected area, when in fact most of it is in an area already removed&lt;br /&gt;&lt;br /&gt;
+   We are working to correct this problem. If this is your case, we ask apologies for the inconvenience!&lt;br  &lt;b&gt;What happens now?&lt;/b&gt;&lt;br /&gt;
+    From this moment, the plot will be green. When available a new satellite image, this parcel will be available to the guardians, so you can check for clearings have been.&lt;br /&gt;&lt;br /&gt;
+                                    &lt;b&gt;Tips to enhance your reports&lt;/b&gt;&lt;br /&gt;
+                                    &lt;ul&gt;
+                                        &lt;li&gt;You can play the minigame I from the [Help] menu to learn to differentiate safe areas from deforested.&lt;/li&gt;
+                                        &lt;li&gt;You can return to see the Pre-Tutorial from the [Help] menu.&lt;/li&gt;
+                                        &lt;li&gt;You can review other verified plots (in red) to compare correct reports.&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    Do not drop your arms, continues to report plots forest plots to keep forest safe!
+                                    &lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="LandVerifications" xml:space="preserve">
+    <value>You came to 30 checks on your plot</value>
+  </data>
+  <data name="LandVerifications2" xml:space="preserve">
+    <value>Congratulations, another 30 guardians have verified the report of your plot.</value>
+  </data>
+  <data name="LandVerifications3" xml:space="preserve">
+    <value>From now Greenpeace will verify the validity of the report!</value>
+  </data>
+  <data name="LandVerifications4" xml:space="preserve">
+    <value>Click here to continue protecting the forest</value>
+  </data>
+  <data name="LandVerifications5" xml:space="preserve">
+    <value>Protect the forest</value>
+  </data>
+  <data name="LandVerifications6" xml:space="preserve">
+    <value>This message was sent to</value>
+  </data>
+  <data name="LandVerifications7" xml:space="preserve">
+    <value>. If you do not want to receive notifications in the future you can access the User Control Panel and disable the notifications.</value>
+  </data>
+  <data name="LandVerifications8" xml:space="preserve">
+    <value>Greenpeace. All rights reserved.</value>
+  </data>
+  <data name="LandVerified" xml:space="preserve">
+    <value>Plot Verified</value>
+  </data>
+  <data name="LandVerified2" xml:space="preserve">
+    <value>Your plot has been checked by Greenpeace and we have determinated than your report was correct.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;What this means?&lt;/b&gt;&lt;br&gt;
+  The plot that you reported in Yellow (deforestation) &lt;b&gt;has been effectively deforested&lt;/b&gt;. This fact should be reported, we can not allow the deforestation in areas protected by the Forest Law.&lt;br /&gt;&lt;br /&gt;
+From this moment, your parcel will be enabled for Denounces. It will appear with a red color within Guardians, and clicking on it and then clicking [Report], you will have enabled the [Report] button.&lt;br /&gt;&lt;br /&gt;
+When you see the form, make your complaint and Click [Submit] to relevant authorities to receive your claim.
+&lt;br /&gt;&lt;br /&gt;
+Continues to report plots forest plots to keep forest safe!</value>
+  </data>
+  <data name="LawYear" xml:space="preserve">
+    <value>2008</value>
+  </data>
+  <data name="Now" xml:space="preserve">
+    <value>Now</value>
+  </data>
+  <data name="ReportVerifiedCorrect" xml:space="preserve">
+    <value>Your plot has been checked by Greenpeace and we have determinated than your report was correct.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;What this means?&lt;/b&gt;&lt;br&gt;
+  The plot that you reported in Green (safe) effectively &lt;b&gt;has not been deforested&lt;/b&gt;. 
+When available a new satellite image, this plot will be available for guardians 
+  so that you can check again for deforestation&lt;br /&gt;&lt;br /&gt;Continues to report plots forest plots to keep forest safe!</value>
+  </data>
+  <data name="US" xml:space="preserve">
+    <value>United States</value>
+  </data>
+  <data name="VerificationReport" xml:space="preserve">
+    <value>Verification report</value>
+  </data>
+</root>

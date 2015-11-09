@@ -1,0 +1,1108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{090678FC-58DF-4363-8E8C-6622023281BC}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Earthwatchers.UI</RootNamespace>
+    <AssemblyName>Earthwatchers.UI</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+      en; es; zh; en-CA; es-ar; zh-CN;
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Earthwatchers.UI.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Earthwatchers.UI.App</SilverlightAppEntry>
+    <TestPageFileName>Earthwatchers.UITestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BruTile">
+      <HintPath>Libs\BruTile.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools">
+      <HintPath>Libs\ImageTools.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.IO.Gif">
+      <HintPath>Libs\ImageTools.IO.Gif.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.IO.Jpeg">
+      <HintPath>Libs\ImageTools.IO.Jpeg.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client">
+      <HintPath>Libs\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>Libs\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>Libs\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Silverlight">
+      <HintPath>Libs\Microsoft.Threading.Tasks.Extensions.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp.Silverlight, Version=104.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RestSharp.104.1\lib\sl4\RestSharp.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=5.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime">
+      <HintPath>Libs\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>Libs\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core">
+      <HintPath>$(TargetFrameworkDirectory)System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="WriteableBitmapEx">
+      <HintPath>..\packages\WriteableBitmapEx.1.0.13.0\lib\sl4\WriteableBitmapEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ArcGISImageServiceSample.cs" />
+    <Compile Include="ArcGISImageService\ArcGISImageServiceInfo.cs" />
+    <Compile Include="ArcGISImageService\ArcGISImageServiceProvider.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Current.cs" />
+    <Compile Include="Extensions\Converters.cs" />
+    <Compile Include="Extensions\CustomEventArgs.cs" />
+    <Compile Include="Extensions\StyleExtensions.cs" />
+    <Compile Include="GUI\3D.xaml.cs">
+      <DependentUpon>3D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Comments\CommentScreen.xaml.cs">
+      <DependentUpon>CommentScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Collections.xaml.cs">
+      <DependentUpon>Collections.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\ArgentineLawLayerLegend.xaml.cs">
+      <DependentUpon>ArgentineLawLayerLegend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\CompleteStats.xaml.cs">
+      <DependentUpon>CompleteStats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\ContestWinner.xaml.cs">
+      <DependentUpon>ContestWinner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\CountrySelector.xaml.cs">
+      <DependentUpon>CountrySelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\ForestLawLegend.xaml.cs">
+      <DependentUpon>ForestLawLegend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Image2008Warning.xaml.cs">
+      <DependentUpon>Image2008Warning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\DailySummary.xaml.cs">
+      <DependentUpon>DailySummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\ContextTutorial.xaml.cs">
+      <DependentUpon>ContextTutorial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\CircularProgressBar.xaml.cs">
+      <DependentUpon>CircularProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\LandsVerifiedPercentage.xaml.cs">
+      <DependentUpon>LandsVerifiedPercentage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\PopupMessage.xaml.cs">
+      <DependentUpon>PopupMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\HelpWindow.xaml.cs">
+      <DependentUpon>HelpWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\FindTheJaguarCongrats.xaml.cs">
+      <DependentUpon>FindTheJaguarCongrats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\FindTheJaguarFound.xaml.cs">
+      <DependentUpon>FindTheJaguarFound.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\FindTheJaguar.xaml.cs">
+      <DependentUpon>FindTheJaguar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Stats.xaml.cs">
+      <DependentUpon>Stats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\TutorialGame2Window.xaml.cs">
+      <DependentUpon>TutorialGame2Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\PollsWindow.xaml.cs">
+      <DependentUpon>PollsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\PostTutorialTasks.xaml.cs">
+      <DependentUpon>PostTutorialTasks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\LandActivity.xaml.cs">
+      <DependentUpon>LandActivity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\TimeLineControl.xaml.cs">
+      <DependentUpon>TimeLineControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\LayerControlOnOff.xaml.cs">
+      <DependentUpon>LayerControlOnOff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\NotificationsWindow.xaml.cs">
+      <DependentUpon>NotificationsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\UserPanel.xaml.cs">
+      <DependentUpon>UserPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\WarningScreen.xaml.cs">
+      <DependentUpon>WarningScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\WelcomeWindow.xaml.cs">
+      <DependentUpon>WelcomeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Flag.xaml.cs">
+      <DependentUpon>Flag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\FlagInfoWindow.xaml.cs">
+      <DependentUpon>FlagInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\LayerControl.xaml.cs">
+      <DependentUpon>LayerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\NewsControl.xaml.cs">
+      <DependentUpon>NewsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\NewsOverview.xaml.cs">
+      <DependentUpon>NewsOverview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ranking.xaml.cs">
+      <DependentUpon>Ranking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\ReportWindow.xaml.cs">
+      <DependentUpon>ReportWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\TiledBackground.cs" />
+    <Compile Include="GUI\Controls\TutorialGameWindow.xaml.cs">
+      <DependentUpon>TutorialGameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JsonSerializer.cs" />
+    <Compile Include="Layers\AlertedLandLayer.cs" />
+    <Compile Include="Layers\ArcGisTileSource.cs" />
+    <Compile Include="Layers\ArgentineLawLayer.cs" />
+    <Compile Include="Layers\BasecampLayer.cs" />
+    <Compile Include="Layers\BaseTileLayer.cs" />
+    <Compile Include="Layers\FincasNameLayer.cs" />
+    <Compile Include="Layers\HexagonLayer.cs" />
+    <Compile Include="Layers\JaguarLayer.cs" />
+    <Compile Include="Layers\TestLayer.cs" />
+    <Compile Include="Layers\LandDemandLayer.cs" />
+    <Compile Include="Layers\DfaTileSource.cs" />
+    <Compile Include="Layers\EducationalLayer.cs" />
+    <Compile Include="Layers\EsriWorldSchema.cs" />
+    <Compile Include="Layers\FlagLayer.cs" />
+    <Compile Include="Layers\LayerHelper.cs" />
+    <Compile Include="Layers\LayerInitialization.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MapCountry.cs" />
+    <Compile Include="Models\MapHelper.cs" />
+    <Compile Include="PermalinkHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\AuthenticationRequest.cs" />
+    <Compile Include="Requests\CommentRequests.cs" />
+    <Compile Include="Requests\CollectionRequests.cs" />
+    <Compile Include="Requests\ContestRequests.cs" />
+    <Compile Include="Requests\CustomShareTextRequests.cs" />
+    <Compile Include="Requests\RegionRequests.cs" />
+    <Compile Include="Requests\PopupMessageRequests.cs" />
+    <Compile Include="Requests\EarthwatcherRequests.cs" />
+    <Compile Include="Requests\EarthwatchersRestClient.cs" />
+    <Compile Include="Requests\FlagRequests.cs" />
+    <Compile Include="Requests\ImageRequests.cs" />
+    <Compile Include="Requests\JaguarRequests.cs" />
+    <Compile Include="Requests\LandRequests.cs" />
+    <Compile Include="Requests\LayerRequests.cs" />
+    <Compile Include="Requests\NewsRequests.cs" />
+    <Compile Include="Requests\OpengeocoderRequests.cs" />
+    <Compile Include="Requests\RequestsHelper.cs" />
+    <Compile Include="Requests\ScoreRequests.cs" />
+    <Compile Include="Resources\Labels.Designer.cs">
+      <DependentUpon>Labels.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\ResourceHelper.cs" />
+    <Compile Include="SignalRClient.cs" />
+    <Compile Include="Startup.xaml.cs">
+      <DependentUpon>Startup.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Assets\CoreStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\3D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\Comments\CommentScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\Collections.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\ArgentineLawLayerLegend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\CompleteStats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Controls\ContestWinner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\CountrySelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\ForestLawLegend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\Image2008Warning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Controls\DailySummary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\ContextTutorial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\CircularProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\LandsVerifiedPercentage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Controls\PopupMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Controls\HelpWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\FindTheJaguarCongrats.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\FindTheJaguarFound.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\FindTheJaguar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\Stats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Controls\TutorialGame2Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\PollsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\PostTutorialTasks.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\LandActivity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\TimeLineControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\LayerControlOnOff.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\NotificationsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\UserPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\WarningScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\WelcomeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\Flag.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\FlagInfoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\LayerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\NewsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\NewsOverview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\Ranking.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\ReportWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Controls\TutorialGameWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Startup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <Resource Include="Resources\MyriadPro-Bold.otf" />
+    <Resource Include="Resources\MyriadPro-Regular.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Earthwatchers.MapControl\Earthwatchers.MapControl.csproj">
+      <Project>{a2f0ac1c-02eb-457e-a362-2b8df75f0795}</Project>
+      <Name>Earthwatchers.MapControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Earthwatchers.Models.Portable\Earthwatchers.Models.csproj">
+      <Project>{cdf3793e-d16b-4368-9b7b-dd61be2eea53}</Project>
+      <Name>Earthwatchers.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mapsui\Mapsui.Rendering.XamlRendering-SL\Mapsui.Rendering.XamlRendering-SL\Mapsui.Rendering.XamlRendering-SL.csproj">
+      <Project>{74a0bdf2-e6af-4bab-aa7e-73e68936f1f2}</Project>
+      <Name>Mapsui.Rendering.XamlRendering-SL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mapsui\Mapsui\Mapsui.csproj">
+      <Project>{d74c052a-c07e-4b37-a898-134218aca5c9}</Project>
+      <Name>Mapsui</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\02.mp3" />
+    <Resource Include="Resources\Images\add.png" />
+    <Resource Include="Resources\Images\aerial.png" />
+    <Resource Include="Resources\Images\backgroundshadow.png" />
+    <Resource Include="Resources\Images\backgroundtexture.png" />
+    <Resource Include="Resources\Images\badge.png" />
+    <Resource Include="Resources\Images\bing.png" />
+    <Resource Include="Resources\Images\bingHybrid.jpg" />
+    <Resource Include="Resources\Images\bingStreet.jpg" />
+    <Resource Include="Resources\Images\Bing_Logo.jpg" />
+    <Resource Include="Resources\Images\close.png" />
+    <Resource Include="Resources\Images\comments.png" />
+    <Resource Include="Resources\Images\confirm.png" />
+    <Resource Include="Resources\Images\deconfirm.png" />
+    <Resource Include="Resources\Images\delete.png" />
+    <Resource Include="Resources\Images\deletew.png" />
+    <Resource Include="Resources\Images\demandar2.png" />
+    <Resource Include="Resources\Images\down.png" />
+    <Resource Include="Resources\Images\esriLogo.png" />
+    <Resource Include="Resources\Images\facebook2.png" />
+    <Resource Include="Resources\Images\fb.png" />
+    <Resource Include="Resources\Images\flag_no_shadow.png" />
+    <Resource Include="Resources\Images\flag_out.png" />
+    <Resource Include="Resources\Images\flag_shadow.png" />
+    <Resource Include="Resources\Images\flag_shadow_red.png" />
+    <Resource Include="Resources\Images\forest_and_peat.png" />
+    <Resource Include="Resources\Images\fullscreen.png" />
+    <Resource Include="Resources\Images\geodan.png" />
+    <Resource Include="Resources\Images\geoeye.png" />
+    <Resource Include="Resources\Images\hexagonos_mini.png" />
+    <Resource Include="Resources\Images\hexagon_legend.png" />
+    <Resource Include="Resources\Images\intermap.png" />
+    <Resource Include="Resources\Images\juego1-1.png" />
+    <Resource Include="Resources\Images\juego1-2.png" />
+    <Resource Include="Resources\Images\juego2-1.png" />
+    <Resource Include="Resources\Images\juego2-2.png" />
+    <Resource Include="Resources\Images\juego3-1.png" />
+    <Resource Include="Resources\Images\juego3-2.png" />
+    <Resource Include="Resources\Images\layers.png" />
+    <Resource Include="Resources\Images\logogp.png" />
+    <Resource Include="Resources\Images\maps.png" />
+    <Resource Include="Resources\Images\marker.png" />
+    <Resource Include="Resources\Images\maxextend.png" />
+    <Resource Include="Resources\Images\ok.png" />
+    <Resource Include="Resources\Images\osm.png" />
+    <Resource Include="Resources\Images\palmrubber.png" />
+    <Resource Include="Resources\Images\pan_down.png" />
+    <Resource Include="Resources\Images\pan_left.png" />
+    <Resource Include="Resources\Images\pan_right.png" />
+    <Resource Include="Resources\Images\pan_up.png" />
+    <Resource Include="Resources\Images\parcelaalert.png" />
+    <Resource Include="Resources\Images\parcelaok.png" />
+    <Resource Include="Resources\Images\piln_logo_transparent_inverted.png" />
+    <Resource Include="Resources\Images\publishmap.png" />
+    <Resource Include="Resources\Images\questionmark.png" />
+    <Resource Include="Resources\Images\reportar.png" />
+    <Resource Include="Resources\Images\reshuffle.png" />
+    <Resource Include="Resources\Images\revisar.png" />
+    <Resource Include="Resources\Images\ruler.png" />
+    <Resource Include="Resources\Images\search.png" />
+    <Resource Include="Resources\Images\tree_off.png" />
+    <Resource Include="Resources\Images\tree_on.png" />
+    <Resource Include="Resources\Images\twitter.png" />
+    <Resource Include="Resources\Images\twitter2.png" />
+    <Resource Include="Resources\Images\up.png" />
+    <Resource Include="Resources\Images\user-active.png" />
+    <Resource Include="Resources\Images\user.png" />
+    <Resource Include="Resources\Images\warning.png" />
+    <Resource Include="Resources\Images\world_imagery.png" />
+    <Resource Include="Resources\Images\zoomin.png" />
+    <Resource Include="Resources\Images\zoomout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\logogp_mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\welcome1.jpg" />
+    <Resource Include="Resources\Images\welcome2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\parcelaokw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\welcomepopup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\w3_step1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\w3_step21.png" />
+    <Resource Include="Resources\Images\w3_step22.png" />
+    <Resource Include="Resources\Images\w3_step23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\w3_step41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\demandar_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Labels.en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Labels.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Labels.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Labels.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Labels.zh.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\badgej.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\demandaricon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\confirm_off.png" />
+    <Resource Include="Resources\Images\deconfirm_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\logogp_eng.png" />
+    <Resource Include="Resources\Images\logogp_mini_eng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\completo_aerea.jpg" />
+    <Resource Include="Resources\Images\completo_satelital.jpg" />
+    <Resource Include="Resources\Images\desmonte_aerea.jpg" />
+    <Resource Include="Resources\Images\desmonte_satelital.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\edituser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\edituser2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Collections\10.png" />
+    <Resource Include="Resources\Images\Collections\11.png" />
+    <Resource Include="Resources\Images\Collections\12.png" />
+    <Resource Include="Resources\Images\Collections\13.png" />
+    <Resource Include="Resources\Images\Collections\14.png" />
+    <Resource Include="Resources\Images\Collections\15.png" />
+    <Resource Include="Resources\Images\Collections\16.png" />
+    <Resource Include="Resources\Images\Collections\17.png" />
+    <Resource Include="Resources\Images\Collections\18.png" />
+    <Resource Include="Resources\Images\Collections\19.png" />
+    <Resource Include="Resources\Images\Collections\2.png" />
+    <Resource Include="Resources\Images\Collections\20.png" />
+    <Resource Include="Resources\Images\Collections\21.png" />
+    <Resource Include="Resources\Images\Collections\22.png" />
+    <Resource Include="Resources\Images\Collections\23.png" />
+    <Resource Include="Resources\Images\Collections\24.png" />
+    <Resource Include="Resources\Images\Collections\25.png" />
+    <Resource Include="Resources\Images\Collections\3.png" />
+    <Resource Include="Resources\Images\Collections\4.png" />
+    <Resource Include="Resources\Images\Collections\5.png" />
+    <Resource Include="Resources\Images\Collections\6.png" />
+    <Resource Include="Resources\Images\Collections\7.png" />
+    <Resource Include="Resources\Images\Collections\8.png" />
+    <Resource Include="Resources\Images\Collections\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Collections\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tada.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\bonus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\stats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\jaguar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\jaguar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\jaguarBorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\hexagono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\jaguar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\binoculars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\jaguarbadge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\2013_right.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\2008_wrong3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\trophy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\trophy_gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\demandaricon_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libs\BruTile.dll" />
+    <Content Include="Libs\ImageTools.dll" />
+    <Content Include="Libs\ImageTools.IO.Gif.dll" />
+    <Content Include="Libs\ImageTools.IO.Jpeg.dll" />
+    <Content Include="Libs\Microsoft.AspNet.SignalR.Client.dll" />
+    <Content Include="Libs\Microsoft.Threading.Tasks.dll" />
+    <Content Include="Libs\Microsoft.Threading.Tasks.Extensions.dll" />
+    <Content Include="Libs\Microsoft.Threading.Tasks.Extensions.Silverlight.dll" />
+    <!--<Content Include="Libs\Newtonsoft.Json.dll" />-->
+    <Content Include="Libs\System.Runtime.dll" />
+    <Content Include="Libs\System.Threading.Tasks.dll" />
+    <Resource Include="Resources\Images\ContextTutorials\Chaco.jpg" />
+    <Resource Include="Resources\Images\ContextTutorials\Salta.jpg" />
+    <Resource Include="Resources\Images\ContextTutorials\bgImage.png" />
+    <Resource Include="Resources\Images\Flags\2-35.png" />
+    <Resource Include="Resources\Images\world-map-ar.png" />
+    <Resource Include="Resources\Images\world-map.png" />
+    <Resource Include="Resources\Images\FincasName\noImage.png" />
+    <Resource Include="Resources\Images\downArrow.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\changeregion2.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\myplot2.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\newplot2.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\zoomin2.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\zoomout2.png" />
+    <Resource Include="Resources\Images\ContextTutorials\5-1.png" />
+    <Resource Include="Resources\Images\ContextTutorials\5-2.png" />
+    <Resource Include="Resources\Images\Flags\5-35.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\verifiedplotsg.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\verifiedplotsr.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\verifiedplotsw.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\regionalpts.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\ranking.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\changeregion.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\conf.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\fullscreen.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\help.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\myplot.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\newplot.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\plots.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\user.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\zoomin.png" />
+    <Resource Include="Resources\Images\LeftMenuIcons\zoomout.png" />
+    <Resource Include="Resources\Images\precisionGood2.png" />
+    <Resource Include="Resources\Images\precisionNormal2.png" />
+    <Resource Include="Resources\Images\precisionBad2.png" />
+    <Resource Include="Resources\Images\Flags\ar-35 - Copy.png" />
+    <Resource Include="Resources\Images\Flags\ca-35 - Copy.png" />
+    <Resource Include="Resources\Images\Flags\1-35.png" />
+    <Resource Include="Resources\Images\Flags\CA-35.png" />
+    <Resource Include="Resources\Images\Flags\YA-35.png" />
+    <Resource Include="Resources\Images\Flags\ZH-35.png" />
+    <Resource Include="Resources\Images\FincasName\64_2.png" />
+    <Resource Include="Resources\Images\FincasName\67_2.png" />
+    <Resource Include="Resources\Images\FincasName\68_2.png" />
+    <Resource Include="Resources\Images\FincasName\69_2.png" />
+    <Resource Include="Resources\Images\FincasName\70_2.png" />
+    <Resource Include="Resources\Images\FincasName\71_2.png" />
+    <Resource Include="Resources\Images\FincasName\72_2.png" />
+    <Resource Include="Resources\Images\FincasName\73_2.png" />
+    <Resource Include="Resources\Images\FincasName\74_2.png" />
+    <Resource Include="Resources\Images\FincasName\75_2.png" />
+    <Resource Include="Resources\Images\FincasName\76_2.png" />
+    <Resource Include="Resources\Images\FincasName\64_1.png" />
+    <Resource Include="Resources\Images\FincasName\67_1.png" />
+    <Resource Include="Resources\Images\FincasName\68_1.png" />
+    <Resource Include="Resources\Images\FincasName\69_1.png" />
+    <Resource Include="Resources\Images\FincasName\70_1.png" />
+    <Resource Include="Resources\Images\FincasName\71_1.png" />
+    <Resource Include="Resources\Images\FincasName\72_1.png" />
+    <Resource Include="Resources\Images\FincasName\73_1.png" />
+    <Resource Include="Resources\Images\FincasName\74_1.png" />
+    <Resource Include="Resources\Images\FincasName\75_1.png" />
+    <Resource Include="Resources\Images\FincasName\76_1.png" />
+    <Resource Include="Resources\Images\ContextTutorials\3-2.png" />
+    <Resource Include="Resources\Images\ContextTutorials\4-2.png" />
+    <Resource Include="Resources\Images\ContextTutorials\3-1.png" />
+    <Resource Include="Resources\Images\ContextTutorials\4-1.png" />
+    <Resource Include="Resources\Images\ContextTutorials\2-1.png" />
+    <Resource Include="Resources\Images\ContextTutorials\2-2.png" />
+    <Resource Include="Resources\Images\ContextTutorials\CN-1.png" />
+    <Resource Include="Resources\Images\ContextTutorials\CN-2.png" />
+    <Resource Include="Resources\Images\Flags\cn-35.png" />
+    <Resource Include="Resources\Images\ContextTutorials\1-1.png" />
+    <Resource Include="Resources\Images\ContextTutorials\1-2.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ad.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ae.png" />
+    <Resource Include="Resources\Images\CountriesFlags\af.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ag.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ai.png" />
+    <Resource Include="Resources\Images\CountriesFlags\al.png" />
+    <Resource Include="Resources\Images\CountriesFlags\am.png" />
+    <Resource Include="Resources\Images\CountriesFlags\an.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ao.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ar.png" />
+    <Resource Include="Resources\Images\CountriesFlags\as.png" />
+    <Resource Include="Resources\Images\CountriesFlags\at.png" />
+    <Resource Include="Resources\Images\CountriesFlags\au.png" />
+    <Resource Include="Resources\Images\CountriesFlags\aw.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ax.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ba.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bb.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bd.png" />
+    <Resource Include="Resources\Images\CountriesFlags\be.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bf.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bg.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bh.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bi.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bj.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bm.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bn.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bo.png" />
+    <Resource Include="Resources\Images\CountriesFlags\br.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bs.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bt.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bw.png" />
+    <Resource Include="Resources\Images\CountriesFlags\by.png" />
+    <Resource Include="Resources\Images\CountriesFlags\bz.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ca.png" />
+    <Resource Include="Resources\Images\CountriesFlags\cd.png" />
+    <Resource Include="Resources\Images\CountriesFlags\cf.png" />
+    <Resource Include="Resources\Images\CountriesFlags\cg.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ch.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ci.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ck.png" />
+    <Resource Include="Resources\Images\CountriesFlags\cl.png" />
+    <Resource Include="Resources\Images\CountriesFlags\cm.png" />
+    <Resource Include="Resources\Images\CountriesFlags\cn.png" />
+    <Resource Include="Resources\Images\CountriesFlags\co.png" />
+    <Resource Include="Resources\Images\CountriesFlags\cr.png" />
+    <Resource Include="Resources\Images\CountriesFlags\cu.png" />
+    <Resource Include="Resources\Images\CountriesFlags\cv.png" />
+    <Resource Include="Resources\Images\CountriesFlags\cx.png" />
+    <Resource Include="Resources\Images\CountriesFlags\cy.png" />
+    <Resource Include="Resources\Images\CountriesFlags\cz.png" />
+    <Resource Include="Resources\Images\CountriesFlags\de.png" />
+    <Resource Include="Resources\Images\CountriesFlags\dj.png" />
+    <Resource Include="Resources\Images\CountriesFlags\dk.png" />
+    <Resource Include="Resources\Images\CountriesFlags\dm.png" />
+    <Resource Include="Resources\Images\CountriesFlags\do.png" />
+    <Resource Include="Resources\Images\CountriesFlags\dz.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ec.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ee.png" />
+    <Resource Include="Resources\Images\CountriesFlags\eg.png" />
+    <Resource Include="Resources\Images\CountriesFlags\er.png" />
+    <Resource Include="Resources\Images\CountriesFlags\es.png" />
+    <Resource Include="Resources\Images\CountriesFlags\et.png" />
+    <Resource Include="Resources\Images\CountriesFlags\eu.png" />
+    <Resource Include="Resources\Images\CountriesFlags\fi.png" />
+    <Resource Include="Resources\Images\CountriesFlags\fj.png" />
+    <Resource Include="Resources\Images\CountriesFlags\fk.png" />
+    <Resource Include="Resources\Images\CountriesFlags\fm.png" />
+    <Resource Include="Resources\Images\CountriesFlags\fo.png" />
+    <Resource Include="Resources\Images\CountriesFlags\fr.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ga.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gd.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ge.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gg.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gh.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gi.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gl.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gm.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gn.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gq.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gr-cy.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gr.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gs.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gt.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gu.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gw.png" />
+    <Resource Include="Resources\Images\CountriesFlags\gy.png" />
+    <Resource Include="Resources\Images\CountriesFlags\hk.png" />
+    <Resource Include="Resources\Images\CountriesFlags\hn.png" />
+    <Resource Include="Resources\Images\CountriesFlags\hr.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ht.png" />
+    <Resource Include="Resources\Images\CountriesFlags\hu.png" />
+    <Resource Include="Resources\Images\CountriesFlags\id.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ie.png" />
+    <Resource Include="Resources\Images\CountriesFlags\il.png" />
+    <Resource Include="Resources\Images\CountriesFlags\im.png" />
+    <Resource Include="Resources\Images\CountriesFlags\in.png" />
+    <Resource Include="Resources\Images\CountriesFlags\io.png" />
+    <Resource Include="Resources\Images\CountriesFlags\iq.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ir.png" />
+    <Resource Include="Resources\Images\CountriesFlags\is.png" />
+    <Resource Include="Resources\Images\CountriesFlags\it.png" />
+    <Resource Include="Resources\Images\CountriesFlags\je.png" />
+    <Resource Include="Resources\Images\CountriesFlags\jm.png" />
+    <Resource Include="Resources\Images\CountriesFlags\jo.png" />
+    <Resource Include="Resources\Images\CountriesFlags\jp.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ke.png" />
+    <Resource Include="Resources\Images\CountriesFlags\kg.png" />
+    <Resource Include="Resources\Images\CountriesFlags\kh.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ki.png" />
+    <Resource Include="Resources\Images\CountriesFlags\km.png" />
+    <Resource Include="Resources\Images\CountriesFlags\kn.png" />
+    <Resource Include="Resources\Images\CountriesFlags\kp.png" />
+    <Resource Include="Resources\Images\CountriesFlags\kr.png" />
+    <Resource Include="Resources\Images\CountriesFlags\kw.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ky.png" />
+    <Resource Include="Resources\Images\CountriesFlags\kz.png" />
+    <Resource Include="Resources\Images\CountriesFlags\la.png" />
+    <Resource Include="Resources\Images\CountriesFlags\lb.png" />
+    <Resource Include="Resources\Images\CountriesFlags\lc.png" />
+    <Resource Include="Resources\Images\CountriesFlags\li.png" />
+    <Resource Include="Resources\Images\CountriesFlags\lk.png" />
+    <Resource Include="Resources\Images\CountriesFlags\lr.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ls.png" />
+    <Resource Include="Resources\Images\CountriesFlags\lt.png" />
+    <Resource Include="Resources\Images\CountriesFlags\lu.png" />
+    <Resource Include="Resources\Images\CountriesFlags\lv.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ly.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ma.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mc.png" />
+    <Resource Include="Resources\Images\CountriesFlags\md.png" />
+    <Resource Include="Resources\Images\CountriesFlags\me.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mg.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mh.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ml.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mn.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mo.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mp.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mq.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mr.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ms.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mt.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mu.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mv.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mw.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mx.png" />
+    <Resource Include="Resources\Images\CountriesFlags\my.png" />
+    <Resource Include="Resources\Images\CountriesFlags\mz.png" />
+    <Resource Include="Resources\Images\CountriesFlags\na.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ne.png" />
+    <Resource Include="Resources\Images\CountriesFlags\nf.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ng.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ni.png" />
+    <Resource Include="Resources\Images\CountriesFlags\nl.png" />
+    <Resource Include="Resources\Images\CountriesFlags\nm.png" />
+    <Resource Include="Resources\Images\CountriesFlags\no.png" />
+    <Resource Include="Resources\Images\CountriesFlags\np.png" />
+    <Resource Include="Resources\Images\CountriesFlags\nr.png" />
+    <Resource Include="Resources\Images\CountriesFlags\nu.png" />
+    <Resource Include="Resources\Images\CountriesFlags\nz.png" />
+    <Resource Include="Resources\Images\CountriesFlags\om.png" />
+    <Resource Include="Resources\Images\CountriesFlags\pa.png" />
+    <Resource Include="Resources\Images\CountriesFlags\pf.png" />
+    <Resource Include="Resources\Images\CountriesFlags\pg.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ph.png" />
+    <Resource Include="Resources\Images\CountriesFlags\pk.png" />
+    <Resource Include="Resources\Images\CountriesFlags\pl.png" />
+    <Resource Include="Resources\Images\CountriesFlags\pm.png" />
+    <Resource Include="Resources\Images\CountriesFlags\pn.png" />
+    <Resource Include="Resources\Images\CountriesFlags\pr.png" />
+    <Resource Include="Resources\Images\CountriesFlags\pt.png" />
+    <Resource Include="Resources\Images\CountriesFlags\pw.png" />
+    <Resource Include="Resources\Images\CountriesFlags\py.png" />
+    <Resource Include="Resources\Images\CountriesFlags\qa.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ro.png" />
+    <Resource Include="Resources\Images\CountriesFlags\rs.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ru.png" />
+    <Resource Include="Resources\Images\CountriesFlags\rw.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sa.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sb.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sc.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sd.png" />
+    <Resource Include="Resources\Images\CountriesFlags\se.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sg.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sh.png" />
+    <Resource Include="Resources\Images\CountriesFlags\si.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sk.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sl.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sm.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sn.png" />
+    <Resource Include="Resources\Images\CountriesFlags\so.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sr.png" />
+    <Resource Include="Resources\Images\CountriesFlags\st.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sv.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sy.png" />
+    <Resource Include="Resources\Images\CountriesFlags\sz.png" />
+    <Resource Include="Resources\Images\CountriesFlags\tc.png" />
+    <Resource Include="Resources\Images\CountriesFlags\td.png" />
+    <Resource Include="Resources\Images\CountriesFlags\tg.png" />
+    <Resource Include="Resources\Images\CountriesFlags\th.png" />
+    <Resource Include="Resources\Images\CountriesFlags\tj.png" />
+    <Resource Include="Resources\Images\CountriesFlags\tl.png" />
+    <Resource Include="Resources\Images\CountriesFlags\tm.png" />
+    <Resource Include="Resources\Images\CountriesFlags\tn.png" />
+    <Resource Include="Resources\Images\CountriesFlags\to.png" />
+    <Resource Include="Resources\Images\CountriesFlags\tr.png" />
+    <Resource Include="Resources\Images\CountriesFlags\tt.png" />
+    <Resource Include="Resources\Images\CountriesFlags\tv.png" />
+    <Resource Include="Resources\Images\CountriesFlags\tw.png" />
+    <Resource Include="Resources\Images\CountriesFlags\tz.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ua.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ug.png" />
+    <Resource Include="Resources\Images\CountriesFlags\uk.png" />
+    <Resource Include="Resources\Images\CountriesFlags\us.png" />
+    <Resource Include="Resources\Images\CountriesFlags\uy.png" />
+    <Resource Include="Resources\Images\CountriesFlags\uz.png" />
+    <Resource Include="Resources\Images\CountriesFlags\vc.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ve.png" />
+    <Resource Include="Resources\Images\CountriesFlags\vg.png" />
+    <Resource Include="Resources\Images\CountriesFlags\vh.png" />
+    <Resource Include="Resources\Images\CountriesFlags\vi.png" />
+    <Resource Include="Resources\Images\CountriesFlags\vn.png" />
+    <Resource Include="Resources\Images\CountriesFlags\vu.png" />
+    <Resource Include="Resources\Images\CountriesFlags\wf.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ws.png" />
+    <Resource Include="Resources\Images\CountriesFlags\ye.png" />
+    <Resource Include="Resources\Images\CountriesFlags\yt.png" />
+    <Resource Include="Resources\Images\CountriesFlags\yu.png" />
+    <Resource Include="Resources\Images\CountriesFlags\za.png" />
+    <Resource Include="Resources\Images\CountriesFlags\zm.png" />
+    <Resource Include="Resources\Images\CountriesFlags\zw.png" />
+    <Resource Include="Resources\Images\world.png" />
+    <Resource Include="Resources\Images\Flags\ar.png" />
+    <Resource Include="Resources\Images\tutContAR-1.png" />
+    <Resource Include="Resources\Images\tutContAR-2.png" />
+    <Resource Include="Resources\Images\tutContAR-3.png" />
+    <Resource Include="Resources\Images\taringa.png" />
+    <Resource Include="Resources\Images\left.png" />
+    <Resource Include="Resources\Images\right.png" />
+    <Resource Include="Resources\Images\FincasName\60_1.png" />
+    <Resource Include="Resources\Images\FincasName\60_2.png" />
+    <Resource Include="Resources\Images\FincasName\61_1.png" />
+    <Resource Include="Resources\Images\FincasName\61_2.png" />
+    <Resource Include="Resources\Images\FincasName\62_1.png" />
+    <Resource Include="Resources\Images\FincasName\62_2.png" />
+    <Resource Include="Resources\Images\demandar.png" />
+    <Resource Include="Resources\Images\demandarShare.png" />
+    <Resource Include="Resources\Images\FincasName\59_1.png" />
+    <Resource Include="Resources\Images\FincasName\59_2.png" />
+    <Resource Include="Resources\Images\FincasName\46_1.png" />
+    <Resource Include="Resources\Images\FincasName\46_2.png" />
+    <Resource Include="Resources\Images\FincasName\47_1.png" />
+    <Resource Include="Resources\Images\FincasName\47_2.png" />
+    <Resource Include="Resources\Images\FincasName\48_1.png" />
+    <Resource Include="Resources\Images\FincasName\48_2.png" />
+    <Resource Include="Resources\Images\FincasName\49_1.png" />
+    <Resource Include="Resources\Images\FincasName\49_2.png" />
+    <Resource Include="Resources\Images\FincasName\50_1.png" />
+    <Resource Include="Resources\Images\FincasName\50_2.png" />
+    <Resource Include="Resources\Images\FincasName\51_1.png" />
+    <Resource Include="Resources\Images\FincasName\51_2.png" />
+    <Resource Include="Resources\Images\FincasName\52_1.png" />
+    <Resource Include="Resources\Images\FincasName\52_2.png" />
+    <Resource Include="Resources\Images\FincasName\53_1.png" />
+    <Resource Include="Resources\Images\FincasName\53_2.png" />
+    <Resource Include="Resources\Images\FincasName\54_1.png" />
+    <Resource Include="Resources\Images\FincasName\54_2.png" />
+    <Resource Include="Resources\Images\FincasName\55_1.png" />
+    <Resource Include="Resources\Images\FincasName\55_2.png" />
+    <Resource Include="Resources\Images\FincasName\56_1.png" />
+    <Resource Include="Resources\Images\FincasName\56_2.png" />
+    <Resource Include="Resources\Images\FincasName\57_1.png" />
+    <Resource Include="Resources\Images\FincasName\57_2.png" />
+    <Resource Include="Resources\Images\FincasName\58_1.png" />
+    <Resource Include="Resources\Images\FincasName\58_2.png" />
+    <Resource Include="Resources\Images\FincasName\42_1.png" />
+    <Resource Include="Resources\Images\FincasName\42_2.png" />
+    <Resource Include="Resources\Images\FincasName\37_1.png" />
+    <Resource Include="Resources\Images\FincasName\37_2.png" />
+    <Resource Include="Resources\Images\FincasName\41_1.png" />
+    <Resource Include="Resources\Images\FincasName\41_2.png" />
+    <Resource Include="Resources\Images\FincasName\43_1.png" />
+    <Resource Include="Resources\Images\FincasName\43_2.png" />
+    <Resource Include="Resources\Images\FincasName\44_1.png" />
+    <Resource Include="Resources\Images\FincasName\44_2.png" />
+    <Resource Include="Resources\Images\FincasName\45_1.png" />
+    <Resource Include="Resources\Images\FincasName\45_2.png" />
+    <Resource Include="Resources\Images\FincasName\36_2.png" />
+    <Resource Include="Resources\Images\FincasName\36_1.png" />
+    <Resource Include="Resources\Images\FincasName\40_1.png" />
+    <Resource Include="Resources\Images\FincasName\40_2.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+</Project>

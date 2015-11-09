@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AR" xml:space="preserve">
+    <value>Argentina</value>
+  </data>
+  <data name="BR" xml:space="preserve">
+    <value>Brasil</value>
+  </data>
+  <data name="CN" xml:space="preserve">
+    <value>China</value>
+  </data>
+  <data name="Congrats" xml:space="preserve">
+    <value>¡Felicitaciones!</value>
+  </data>
+  <data name="GuardiansGreenpeace" xml:space="preserve">
+    <value>Guardianes - Greenpeace</value>
+  </data>
+  <data name="IncorrectReport" xml:space="preserve">
+    <value>Reporte Incorrecto</value>
+  </data>
+  <data name="IncorrectReport2" xml:space="preserve">
+    <value>Tu parcela ha sido verificada por Greenpeace y determinamos que el reporte fue incorrecto.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;¿Qué significa esto?&lt;/b&gt;&lt;br&gt;
+    La parcela que reportaste en Verde (a salvo) fue revisada por nuestros expertos quienes determinaron que &lt;b&gt;contenía un desmonte.&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+    Pero no te preocupes, con el tiempo vas a ganar más experiencia y entrenar tu ojo para identificar mejor los desmontes y las zonas a salvo.&lt;br /&gt;&lt;br /&gt;
+    &lt;b&gt;¿Que pasa ahora?&lt;/b&gt;&lt;br /&gt;
+    A partir de este momento, la parcela estará habilitada para Denuncias. Aparecerá con un color Rojo dentro de Guardianes, 
+ y haciendo click sobre la misma y luego en [Reportar], estará habilitado el boton [Denunciar].&lt;br /&gt;&lt;br /&gt;
+    Cuando veas el formulario, crea tu denuncia y hacé click en [Enviar] para que las autoridades correspondientes reciban tu reclamo. &lt;br /&gt;&lt;br /&gt;
+                                    &lt;b&gt;Tips para mejorar tus reportes&lt;/b&gt;&lt;br /&gt;
+                                    &lt;ul&gt;
+                                        &lt;li&gt;Podés jugar el Minijuego I desde el menú [Ayuda] para aprender a diferenciar zonas a salvo de zonas con desmontes.&lt;/li&gt;
+                                        &lt;li&gt;Podés volver a ver el Pre-Tutorial desde el menú [Ayuda].&lt;/li&gt;
+                                        &lt;li&gt;Podés revisar otras parcelas verificadas (en Rojo) para comparar reportes correctos.&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    No bajes los brazos, ¡continuá reportando parcelas para mantener los bosques a salvo!
+                                    &lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="IncorrectReport3" xml:space="preserve">
+    <value>Tu parcela ha sido verificada por Greenpeace y determinamos que el reporte fue incorrecto.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;¿Qué significa esto?&lt;/b&gt;&lt;br&gt;
+   La parcela que reportaste en Amarillo (desmontes) fue revisada por nuestros expertos quienes determinaron que &lt;b&gt;no contenía desmontes, o que los desmontes corresponden a períodos anteriores a {0}&lt;/b&gt;, cuando no teníamos ley de bosques.&lt;br /&gt;&lt;br /&gt;
+   &lt;b&gt;Pero hay un desmonte, ¿por qué tuve una parcela asignada con un desmonte previo a {1}?&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+   En algunos casos, Guardianes asigna parcelas muy cerca de los límites entre zonas protegidas y zonas desmontadas o en verde. Cuando esto sucede, las parcelas pueden parecer como que están en un área protegida, cuando en realidad la mayor parte está en una zona ya desmontada.&lt;br /&gt;&lt;br /&gt;
+   Estamos trabajando para corregir este problema. Si este es tu caso, ¡te pedimos disculpas por el inconveniente!&lt;br /&gt;&lt;br /&gt;
+   &lt;b&gt;¿Que pasa ahora?&lt;/b&gt;&lt;br /&gt;
+   A partir de este momento, la parcela quedará marcada en verde. Cuando haya disponible una nueva imágen satelital, esta parcela volverá a estar disponible para los guardianes, de modo que se pueda revisar que no hayan habido desmontes.&lt;br /&gt;&lt;br /&gt;
+                                    &lt;b&gt;Tips para mejorar tus reportes&lt;/b&gt;&lt;br /&gt;
+                                    &lt;ul&gt;
+                                        &lt;li&gt;Podés jugar el Minijuego I desde el menú [Ayuda] para aprender a diferenciar zonas a salvo de zonas con desmontes.&lt;/li&gt;
+                                        &lt;li&gt;Podés volver a ver el Pre-Tutorial desde el menú [Ayuda].&lt;/li&gt;
+                                        &lt;li&gt;Podés revisar otras parcelas verificadas (en Rojo) para comparar reportes correctos.&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    &lt;br /&gt;
+                                    No bajes los brazos, ¡continuá reportando parcelas para mantener los bosques a salvo!
+                                    &lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="LandVerifications" xml:space="preserve">
+    <value>Llegaste a las 30 verificaciones en tu parcela</value>
+  </data>
+  <data name="LandVerifications2" xml:space="preserve">
+    <value>Felicitaciones, otros 30 guardianes han verificado el reporte de tu parcela.</value>
+  </data>
+  <data name="LandVerifications3" xml:space="preserve">
+    <value>A partir de ahora Greenpeace verificará la validez del reporte!</value>
+  </data>
+  <data name="LandVerifications4" xml:space="preserve">
+    <value>Click acá para seguir cuidando el bosque</value>
+  </data>
+  <data name="LandVerifications5" xml:space="preserve">
+    <value>Cuidar el Bosque</value>
+  </data>
+  <data name="LandVerifications6" xml:space="preserve">
+    <value>Este mensaje se envío a</value>
+  </data>
+  <data name="LandVerifications7" xml:space="preserve">
+    <value>. Si no quieres recibir más notificaciones en un futuro podés acceder al Panel de Control del usuario y deshabilitar la opción de recibir notificaciones.</value>
+  </data>
+  <data name="LandVerifications8" xml:space="preserve">
+    <value>Greenpeace Argentina. Todos los derechos reservados.</value>
+  </data>
+  <data name="LandVerified" xml:space="preserve">
+    <value>Parcela Verificada</value>
+  </data>
+  <data name="LandVerified2" xml:space="preserve">
+    <value>Tu parcela ha sido verificada por Greenpeace y comprobamos que tu reporte fue correcto.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;¿Qué significa esto?&lt;/b&gt;&lt;br&gt;
+La parcela que reportaste en Amarillo (desmontes) &lt;b&gt;efectivamente ha sido desmontada&lt;/b&gt;. Este hecho debe ser denunciado, no podemos permitir desmontes en zonas protegidas por la Ley de Bosques.&lt;br /&gt;&lt;br /&gt;
+A partir de este momento, tu parcela estará habilitada para Denuncias. Aparecerá con un color Rojo dentro de Guardianes, y haciendo click sobre la misma y luego en [Reportar], tendrás habilitado el boton [Denunciar].&lt;br /&gt;&lt;br /&gt;
+Cuando veas el formulario, crea tu denuncia y hacé click en [Enviar] para que las autoridades correspondientes reciban tu reclamo.&lt;br /&gt;&lt;br /&gt;
+¡Continuá reportando parcelas para mantener los bosques a salvo!</value>
+  </data>
+  <data name="LawYear" xml:space="preserve">
+    <value>2008</value>
+  </data>
+  <data name="MailBienvenidaAsunto" xml:space="preserve">
+    <value>Te damos la bienvenida a Guardianes</value>
+  </data>
+  <data name="MailBienvenidaBoton" xml:space="preserve">
+    <value>Cuidar el Bósque</value>
+  </data>
+  <data name="MailBienvenidaBotonTooltip" xml:space="preserve">
+    <value>Click acá para comenzar a cuidar el bósque</value>
+  </data>
+  <data name="MailBienvenidaCuerpo" xml:space="preserve">
+    <value>Para Comenzar a jugar apretá el botón de abajo!
+&lt;br&gt;&lt;/br&gt;
+
+&lt;b&gt;Tips para Jugar&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt; Podés obtener una nueva parcela apretando [Cambiar Parcela]&lt;/li&gt;
+&lt;li&gt; Comentá en las parcelas de los demás para ayudarlos con sus reportes&lt;/li&gt;
+&lt;li&gt; Completá todos los tutoriales y jugá los minijuegos&lt;/li&gt;
+&lt;li&gt; Entrá varias veces al dia para obtener mas puntos&lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="MailBienvenidaTitulo" xml:space="preserve">
+    <value>Ya estás protegiendo los bósques!</value>
+  </data>
+  <data name="NoMoreLands" xml:space="preserve">
+    <value>Esta región ha sido completada gracias a tu participación y la del resto de los guardianes. Pronto dispondremos de una nueva imagen satelital para continuar monitoreando. Mientras tanto, podés revisar otra región.</value>
+  </data>
+  <data name="Now" xml:space="preserve">
+    <value>Ahora</value>
+  </data>
+  <data name="ReportVerifiedCorrect" xml:space="preserve">
+    <value>Tu parcela ha sido verificada por Greenpeace y comprobamos que tu reporte fue correcto.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;¿Qué significa esto?&lt;/b&gt;&lt;br&gt;
+    La parcela que reportaste en Verde (a salvo) efectivamente &lt;b&gt;no contenía desmontes&lt;/b&gt;. 
+Cuando haya disponible una nueva imágen satelital, esta parcela volverá a estar disponible para los guardianes,
+ de modo que se pueda revisar que no hayan habido desmontes.&lt;br /&gt;&lt;br /&gt;¡Continuá reportando parcelas para mantener los bosques a salvo!</value>
+  </data>
+  <data name="US" xml:space="preserve">
+    <value>Estados Unidos</value>
+  </data>
+  <data name="VerificationReport" xml:space="preserve">
+    <value>Reporte de verificación</value>
+  </data>
+</root>

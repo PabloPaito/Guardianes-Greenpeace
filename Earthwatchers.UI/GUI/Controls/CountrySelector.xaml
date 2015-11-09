@@ -1,0 +1,58 @@
+﻿<controls:ChildWindow x:Class="Earthwatchers.UI.GUI.Controls.CountrySelector"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+        Title="{Binding Path=NavBar15, Source={StaticResource Labels}}"
+        Style="{StaticResource GPDefaultChildWindow}" >
+
+    <Grid Width="900" Height="550">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Image x:Name="mapImage" Grid.Row="0" Grid.ColumnSpan="3" MouseMove="mapImage_MouseMove" MouseLeftButtonUp="mapImage_MouseLeftButtonUp" />
+        <TextBlock x:Name="txtSelectedCountry" 
+                   Grid.Row="1" Grid.Column="1" 
+                   Foreground="Black" FontSize="20"                  
+                   VerticalAlignment="Center" Text="CHINA"/>
+        <Ellipse x:Name="refColor" 
+                 Width="20" Height="20" 
+                 Grid.Row="1" Grid.Column="0" 
+                 HorizontalAlignment="Center" VerticalAlignment="Center" 
+                 Stroke="Black" StrokeThickness="1" 
+                 Visibility="Visible" />
+
+        <!--TODO: HACER EL LISTADO DE ESTE STACKPANEL DINAMICO-->
+        <StackPanel x:Name="Regions" Grid.Row="1" Grid.Column="1" Orientation="Horizontal"
+                    VerticalAlignment="Center" Margin="140,0,0,0" Height="40" Visibility="Collapsed">
+
+            <ComboBox x:Name="regionsCombo" ItemsSource="{Binding Path=_allRegionsForSelectedCountry}"
+                  DisplayMemberPath="Name"
+                  SelectedValuePath="Id"
+                  SelectedValue="{Binding Path=_selectedRegionId}"
+                  SelectionChanged="regionsCombo_SelectionChanged"  
+                  Height="25" />
+        </StackPanel>
+
+        <Button x:Name="nextButton"                 
+                Grid.Row="1" Grid.Column="2" 
+                HorizontalAlignment="Right" VerticalAlignment="Center" 
+                Cursor="Hand" Style="{StaticResource GreenButton}"  
+                Width="170" Height="35" 
+                FontSize="15" FontWeight="Bold"   
+                Foreground="White" Content="{Binding Path=TutorialGame1, Source={StaticResource Labels}}"   
+                Click="ChangePlayingCountry" IsEnabled="{Binding IsValid}" />
+
+        <TextBlock x:Name="errorMsj" Grid.Row="2" Grid.ColumnSpan="3" Margin="15,0,0,0" Visibility="Collapsed"
+        Foreground="#FF1010" TextWrapping="Wrap" FontSize="12" Text="" />
+        
+    </Grid>
+
+</controls:ChildWindow>

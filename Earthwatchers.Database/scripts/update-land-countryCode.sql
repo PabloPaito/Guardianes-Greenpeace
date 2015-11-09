@@ -1,0 +1,2 @@
+﻿update Land --NO HACE FALTA, AL CREAR LA TABLA LOS PONE ASI X DEFAULT
+set CountryCode = 'AR'

@@ -1,0 +1,1744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AcercaDeCuerpo" xml:space="preserve">
+    <value>"森林卫士"是绿色和平组织阿根廷办公室创新实验室的一个项目。                                                                                                              “森林卫士”是受Earth Watchers(见www.deforestaction.com/earthwatchers)启发发展出来的一个项目，即一个关于毁林的Geodan项目(见www.geodan.com)。
+</value>
+  </data>
+  <data name="AcercaDeTitulo" xml:space="preserve">
+    <value>关于我们</value>
+  </data>
+  <data name="Cargando" xml:space="preserve">
+    <value>下载。。。</value>
+  </data>
+  <data name="ChangePlot" xml:space="preserve">
+    <value>如果你想查看新的林地，你可以点击这个按钮。你以前的林地将进行修改。你可以每5分钟更换一次林地。</value>
+  </data>
+  <data name="CollectionArctic" xml:space="preserve">
+    <value>从未进入过北极的</value>
+  </data>
+  <data name="CollectionEnergySupplies" xml:space="preserve">
+    <value>能源供应成本</value>
+  </data>
+  <data name="CollectionEnvironmentHazards" xml:space="preserve">
+    <value>对环境极其危险</value>
+  </data>
+  <data name="CollectionForest" xml:space="preserve">
+    <value>不属于森林的</value>
+  </data>
+  <data name="CollectionItemBags" xml:space="preserve">
+    <value>包</value>
+  </data>
+  <data name="CollectionItemBarrel" xml:space="preserve">
+    <value>桶</value>
+  </data>
+  <data name="CollectionItemBottle" xml:space="preserve">
+    <value>塑料瓶子</value>
+  </data>
+  <data name="CollectionItemBulldozer" xml:space="preserve">
+    <value>推土机</value>
+  </data>
+  <data name="CollectionItemCarbonPlant" xml:space="preserve">
+    <value>煤厂</value>
+  </data>
+  <data name="CollectionItemChainSaw" xml:space="preserve">
+    <value>电锯</value>
+  </data>
+  <data name="CollectionItemChemicals" xml:space="preserve">
+    <value>化学品</value>
+  </data>
+  <data name="CollectionItemForestFire" xml:space="preserve">
+    <value>森林火灾</value>
+  </data>
+  <data name="CollectionItemGolf" xml:space="preserve">
+    <value>高尔夫度假村</value>
+  </data>
+  <data name="CollectionItemIceBreaker" xml:space="preserve">
+    <value>油轮</value>
+  </data>
+  <data name="CollectionItemLeakingTransformers" xml:space="preserve">
+    <value>漏电变压器
+</value>
+  </data>
+  <data name="CollectionItemMatches" xml:space="preserve">
+    <value>汽油和火柴</value>
+  </data>
+  <data name="CollectionItemMedicalGarbage" xml:space="preserve">
+    <value>医疗废弃物</value>
+  </data>
+  <data name="CollectionItemNuclearGarbage" xml:space="preserve">
+    <value>核废料</value>
+  </data>
+  <data name="CollectionItemNuclearPlant" xml:space="preserve">
+    <value>核电厂</value>
+  </data>
+  <data name="CollectionItemOilWell" xml:space="preserve">
+    <value>石油钻机</value>
+  </data>
+  <data name="CollectionItemPetrolMark" xml:space="preserve">
+    <value>溢油</value>
+  </data>
+  <data name="CollectionItemPetrolTower" xml:space="preserve">
+    <value>石油钻井平台</value>
+  </data>
+  <data name="CollectionItemPlantation" xml:space="preserve">
+    <value>人工林</value>
+  </data>
+  <data name="CollectionItemSixPack" xml:space="preserve">
+    <value>六包塑料环</value>
+  </data>
+  <data name="CollectionItemSunkenShip" xml:space="preserve">
+    <value>沉船</value>
+  </data>
+  <data name="CollectionItemTinCan" xml:space="preserve">
+    <value>罐</value>
+  </data>
+  <data name="CollectionItemUraniumMine" xml:space="preserve">
+    <value>铀矿</value>
+  </data>
+  <data name="CollectionItemWeapon" xml:space="preserve">
+    <value>武器</value>
+  </data>
+  <data name="CollectionItemWeaponsGarbage" xml:space="preserve">
+    <value>被遗弃的武器</value>
+  </data>
+  <data name="CollectionOcean" xml:space="preserve">
+    <value>不属于海洋里的</value>
+  </data>
+  <data name="Collections1" xml:space="preserve">
+    <value>这个项目是收藏的一部分</value>
+  </data>
+  <data name="Collections2" xml:space="preserve">
+    <value>不属于森林的</value>
+  </data>
+  <data name="Collections3" xml:space="preserve">
+    <value>你完成了收藏！</value>
+  </data>
+  <data name="Collections4" xml:space="preserve">
+    <value>你已经赢得了1000分！</value>
+  </data>
+  <data name="Collections5" xml:space="preserve">
+    <value>继续报告发现新的目标，完成收藏，多得分数。</value>
+  </data>
+  <data name="Collections7" xml:space="preserve">
+    <value>你已经发现：</value>
+  </data>
+  <data name="Comments1" xml:space="preserve">
+    <value>对这块林地的评论</value>
+  </data>
+  <data name="Comments2" xml:space="preserve">
+    <value>发送</value>
+  </data>
+  <data name="Comments3" xml:space="preserve">
+    <value>删除评论</value>
+  </data>
+  <data name="Comments4" xml:space="preserve">
+    <value>你还没有登录</value>
+  </data>
+  <data name="CONGRATS" xml:space="preserve">
+    <value>恭喜！</value>
+  </data>
+  <data name="Contest1" xml:space="preserve">
+    <value>每周的比赛已经结束了！</value>
+  </data>
+  <data name="Contest2" xml:space="preserve">
+    <value>  是大赛的冠军，他已经赢得了1万分和一个特殊的奖品。</value>
+  </data>
+  <data name="Contest3" xml:space="preserve">
+    <value>请继续参与，新的比赛就要开始了！</value>
+  </data>
+  <data name="Contest4" xml:space="preserve">
+    <value>你是每周比赛的冠军！你已经赢得了1万分和一个奖品，你的成绩会出现在你的介绍里。</value>
+  </data>
+  <data name="Contest5" xml:space="preserve">
+    <value>谢谢参与！</value>
+  </data>
+  <data name="Contest6" xml:space="preserve">
+    <value>在社交网络上和朋友分享你的成绩</value>
+  </data>
+  <data name="Contest7" xml:space="preserve">
+    <value>我参加“森林卫士”,获得了每周比赛的冠军！</value>
+  </data>
+  <data name="Contest8" xml:space="preserve">
+    <value>新的比赛开始了！</value>
+  </data>
+  <data name="DailySummaryContest" xml:space="preserve">
+    <value>比赛结束</value>
+  </data>
+  <data name="DailySummaryDenounce" xml:space="preserve">
+    <value>举报</value>
+  </data>
+  <data name="DailySummaryDenounce1" xml:space="preserve">
+    <value>你要举报信</value>
+  </data>
+  <data name="DailySummaryDenounce3" xml:space="preserve">
+    <value>林地所在地</value>
+  </data>
+  <data name="DailySummaryDenounce5" xml:space="preserve">
+    <value>搜索红色的有边界的林地，点击“举报”</value>
+  </data>
+  <data name="DailySummaryHiUser" xml:space="preserve">
+    <value>你好！</value>
+  </data>
+  <data name="DailySummaryMorePoints" xml:space="preserve">
+    <value>要得到更多的分数，你可以：</value>
+  </data>
+  <data name="DailySummaryRemember" xml:space="preserve">
+    <value>记住检查所有带边界的林地。这些是你做了行动的林地。</value>
+  </data>
+  <data name="DailySummaryReport" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="DailySummaryReport1" xml:space="preserve">
+    <value>你已经报告了。</value>
+  </data>
+  <data name="DailySummaryReport3" xml:space="preserve">
+    <value>林地。每5分钟你可以换一块地，得到一块新林地。</value>
+  </data>
+  <data name="DailySummaryShare" xml:space="preserve">
+    <value>分享</value>
+  </data>
+  <data name="DailySummaryShare1" xml:space="preserve">
+    <value>在社交网络。你已经分享</value>
+  </data>
+  <data name="DailySummaryShare3" xml:space="preserve">
+    <value>你报告和核实的次数。分享越多越知道更多的工具。</value>
+  </data>
+  <data name="DailySummaryTitle" xml:space="preserve">
+    <value>每日总结</value>
+  </data>
+  <data name="DailySummaryVerify" xml:space="preserve">
+    <value>核实</value>
+  </data>
+  <data name="DailySummaryVerify1" xml:space="preserve">
+    <value>你已经检查了</value>
+  </data>
+  <data name="DailySummaryVerify3" xml:space="preserve">
+    <value>国外林地总计</value>
+  </data>
+  <data name="DailySummaryVerify5" xml:space="preserve">
+    <value>搜索绿色或黄色的有边界的林地，并点击“检查”</value>
+  </data>
+  <data name="DailySummaryYourPoints" xml:space="preserve">
+    <value>你现在的得分是</value>
+  </data>
+  <data name="DataPartners1" xml:space="preserve">
+    <value>近实时的数据已经提供：</value>
+  </data>
+  <data name="DataPartners2" xml:space="preserve">
+    <value>上下文已经提供：</value>
+  </data>
+  <data name="DemandWindow1" xml:space="preserve">
+    <value>举报</value>
+  </data>
+  <data name="DemandWindow2" xml:space="preserve">
+    <value>分享举报</value>
+  </data>
+  <data name="DemandWindow3" xml:space="preserve">
+    <value>你已经报告这块林地，你现在可以让别人知道。</value>
+  </data>
+  <data name="DemandWindow4" xml:space="preserve">
+    <value>在社交网络上分享让每个人知道</value>
+  </data>
+  <data name="DemandWindow5" xml:space="preserve">
+    <value>这块林地的森林已经肯定被毁了。</value>
+  </data>
+  <data name="DemandWindow6" xml:space="preserve">
+    <value>最后把你的举报发送到主管部门！</value>
+  </data>
+  <data name="EducationalLayerControl1" xml:space="preserve">
+    <value>毁林</value>
+  </data>
+  <data name="FindTheJaguar1" xml:space="preserve">
+    <value>这个地方藏着一只迷路的美洲虎！</value>
+  </data>
+  <data name="FindTheJaguar2" xml:space="preserve">
+    <value>我们知道一只小美洲虎在某处迷路了。</value>
+  </data>
+  <data name="FindTheJaguar3" xml:space="preserve">
+    <value>第一个找到他你将赢得5000分！</value>
+  </data>
+  <data name="FindTheJaguar4" xml:space="preserve">
+    <value>怎样找到他？</value>
+  </data>
+  <data name="FindTheJaguar5" xml:space="preserve">
+    <value>营救美洲虎</value>
+  </data>
+  <data name="FindTheJaguar6" xml:space="preserve">
+    <value>指南</value>
+  </data>
+  <data name="FindTheJaguar7" xml:space="preserve">
+    <value>在地图的某处有一只小美洲虎迷路了。要找到他，首先要放大直到美洲虎的图标（左边）变成望远镜。然后，在那个水平上拖拽研究整个地图。他隐藏在保护区的某个地方。在别的“森林卫士”营救他之前找到他就能拿到奖品！</value>
+  </data>
+  <data name="Flag1" xml:space="preserve">
+    <value>登录升旗</value>
+  </data>
+  <data name="FlagInfoWindow" xml:space="preserve">
+    <value>测验</value>
+  </data>
+  <data name="ForestLawCongrats" xml:space="preserve">
+    <value>恭喜！根据森林法，你已经开启了森林保护地图。</value>
+  </data>
+  <data name="ForestLawCongrats1" xml:space="preserve">
+    <value>使用这个功能你能根据颜色找到保护区。红色的区域不允许任何形式的砍伐。黄色区域允许可持续的砍伐，不允许皆伐。如取得许可证，并举行公众听证会，绿色区域允许更多砍伐。</value>
+  </data>
+  <data name="ForestLawCongrats2" xml:space="preserve">
+    <value>点击这里激活或关闭这层。</value>
+  </data>
+  <data name="gray" xml:space="preserve">
+    <value>灰色</value>
+  </data>
+  <data name="green" xml:space="preserve">
+    <value>绿色</value>
+  </data>
+  <data name="Help1" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="Help10" xml:space="preserve">
+    <value>计分</value>
+  </data>
+  <data name="Help11" xml:space="preserve">
+    <value>什么行动可以得分？</value>
+  </data>
+  <data name="Help12" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="Help13" xml:space="preserve">
+    <value>每次登录2个小时，你就可以得到100分。</value>
+  </data>
+  <data name="Help14" xml:space="preserve">
+    <value>完成辅导课</value>
+  </data>
+  <data name="Help15" xml:space="preserve">
+    <value>第一次接触“森林卫士”并完成辅导课，你就可以得到2000分。</value>
+  </data>
+  <data name="Help16" xml:space="preserve">
+    <value>核实</value>
+  </data>
+  <data name="Help17" xml:space="preserve">
+    <value>每核实一块林地，你就可以得到250分。</value>
+  </data>
+  <data name="Help18" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="Help19" xml:space="preserve">
+    <value>报告林地的状况你就可以得到750分。</value>
+  </data>
+  <data name="Help2" xml:space="preserve">
+    <value>经常回答问题</value>
+  </data>
+  <data name="Help20" xml:space="preserve">
+    <value>分享</value>
+  </data>
+  <data name="Help21" xml:space="preserve">
+    <value>分享你的报告或林地核实，你就可以得到500分（1天最多10次）。</value>
+  </data>
+  <data name="Help22" xml:space="preserve">
+    <value>要求</value>
+  </data>
+  <data name="Help23" xml:space="preserve">
+    <value>向管理部门提出一个要求，你可以得到1000分。</value>
+  </data>
+  <data name="Help24" xml:space="preserve">
+    <value>游戏</value>
+  </data>
+  <data name="Help25" xml:space="preserve">
+    <value>游戏中得到的每棵树都值500分。</value>
+  </data>
+  <data name="Help3" xml:space="preserve">
+    <value>预辅导</value>
+  </data>
+  <data name="Help4" xml:space="preserve">
+    <value>我在哪里和怎么发现毁林</value>
+  </data>
+  <data name="Help5" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Help6" xml:space="preserve">
+    <value>怎么使用“森林卫士”</value>
+  </data>
+  <data name="Help7" xml:space="preserve">
+    <value>游戏</value>
+  </data>
+  <data name="Help8" xml:space="preserve">
+    <value>“森林卫士”-帮助</value>
+  </data>
+  <data name="Help9" xml:space="preserve">
+    <value>未完成</value>
+  </data>
+  <data name="HelphWindow" xml:space="preserve">
+    <value>帮助菜单</value>
+  </data>
+  <data name="HexInfo1" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="HexInfo2" xml:space="preserve">
+    <value>检查</value>
+  </data>
+  <data name="HexInfo3" xml:space="preserve">
+    <value>评论</value>
+  </data>
+  <data name="HexInfo4" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="HexInfo5" xml:space="preserve">
+    <value>“举报”</value>
+  </data>
+  <data name="HexInfo6" xml:space="preserve">
+    <value>点击查看这块林地更多活动</value>
+  </data>
+  <data name="HexInfo7" xml:space="preserve">
+    <value>在这块林地上活动的用户</value>
+  </data>
+  <data name="HexInfo8" xml:space="preserve">
+    <value>进行详查的“森林卫士”</value>
+  </data>
+  <data name="HexLegend1" xml:space="preserve">
+    <value>没有变化</value>
+  </data>
+  <data name="HexLegend2" xml:space="preserve">
+    <value>注意报告！</value>
+  </data>
+  <data name="HexLegend3" xml:space="preserve">
+    <value>毁林</value>
+  </data>
+  <data name="HexLegend4" xml:space="preserve">
+    <value>详查所有地点</value>
+  </data>
+  <data name="ImageWarning1" xml:space="preserve">
+    <value>重要！</value>
+  </data>
+  <data name="ImageWarning2" xml:space="preserve">
+    <value>现在</value>
+  </data>
+  <data name="ImageWarning3" xml:space="preserve">
+    <value>“森林卫士”保护森林法的执行，因此，如果你在2008年的图片里看见毁林</value>
+  </data>
+  <data name="ImageWarning4" xml:space="preserve">
+    <value>没有必要报告</value>
+  </data>
+  <data name="ImageWarning5" xml:space="preserve">
+    <value>如果得到一个在2008年已经遭到毁林的林地，你可以点击“更换林地”键来更换。</value>
+  </data>
+  <data name="ImageWarning6" xml:space="preserve">
+    <value>（森林法颁布之前的毁林）</value>
+  </data>
+  <data name="JaguarCongrats2" xml:space="preserve">
+    <value>你赢了</value>
+  </data>
+  <data name="JaguarCongrats3" xml:space="preserve">
+    <value>5000分</value>
+  </data>
+  <data name="JaguarCongrats4" xml:space="preserve">
+    <value>你发现了美洲虎！</value>
+  </data>
+  <data name="JaguarFound1" xml:space="preserve">
+    <value>美洲虎被   发现了</value>
+  </data>
+  <data name="JaguarFound2" xml:space="preserve">
+    <value>保持警惕，更多需要保护的美洲虎可能出现！</value>
+  </data>
+  <data name="Layers1" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="Layers10" xml:space="preserve">
+    <value>移动图片</value>
+  </data>
+  <data name="Layers11" xml:space="preserve">
+    <value>从列表选择一个图片加入时间表</value>
+  </data>
+  <data name="Layers12" xml:space="preserve">
+    <value>拖拽白色的圆圈到不同的日期去更改卫星图片</value>
+  </data>
+  <data name="Layers13" xml:space="preserve">
+    <value>六边形</value>
+  </data>
+  <data name="Layers14" xml:space="preserve">
+    <value>森林法</value>
+  </data>
+  <data name="layers15" xml:space="preserve">
+    <value>点击这里激活或关闭六边形填充物。</value>
+  </data>
+  <data name="layers16" xml:space="preserve">
+    <value>点击这里激活或关闭森林法地图</value>
+  </data>
+  <data name="Layers2" xml:space="preserve">
+    <value>加日期</value>
+  </data>
+  <data name="Layers3" xml:space="preserve">
+    <value>林地</value>
+  </data>
+  <data name="Layers4" xml:space="preserve">
+    <value>卫星图片</value>
+  </data>
+  <data name="Layers5" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="Layers6" xml:space="preserve">
+    <value>名字</value>
+  </data>
+  <data name="Layers7" xml:space="preserve">
+    <value>卫星图片不允许这种缩放等级。增加缩放等级，再试一次。</value>
+  </data>
+  <data name="Layers8" xml:space="preserve">
+    <value>在这个区域未能发现图片。移动到其他地区，再试一次。</value>
+  </data>
+  <data name="Layers9" xml:space="preserve">
+    <value>辅导课上你需要选择一个图片继续。</value>
+  </data>
+  <data name="LegendLabel1" xml:space="preserve">
+    <value>未检查</value>
+  </data>
+  <data name="LegendLabel4" xml:space="preserve">
+    <value>准备开始“举报”</value>
+  </data>
+  <data name="LegendLabel5" xml:space="preserve">
+    <value>你进行了检查</value>
+  </data>
+  <data name="LogoPath" xml:space="preserve">
+    <value>logogp_eng.png</value>
+  </data>
+  <data name="LogoPathMini" xml:space="preserve">
+    <value>logogp_mini_eng.png</value>
+  </data>
+  <data name="MailBienvenidaAsunto" xml:space="preserve">
+    <value>欢迎来到“森林卫士”</value>
+  </data>
+  <data name="MailBienvenidaBoton" xml:space="preserve">
+    <value>保护森林</value>
+  </data>
+  <data name="MailBienvenidaBotonTooltip" xml:space="preserve">
+    <value>点击这里开始保护森林</value>
+  </data>
+  <data name="MailBienvenidaCuerpo" xml:space="preserve">
+    <value>开始玩，点击以下按键！                                      &lt;br&gt;&lt;/br&gt;                                                       &lt;b&gt;小提示&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt; 点击[新林地]&lt;/li&gt;你可以得到新林地
+&lt;li&gt; 评价其他“森林卫士”的林地，保住他们报告&lt;/li&gt;
+&lt;li&gt; 完成所有辅导课&lt;/li&gt;
+&lt;li&gt; 每天多次登录得到更多分数&lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="MailBienvenidaTitulo" xml:space="preserve">
+    <value>你准备好了成为一个森林“森林卫士”！</value>
+  </data>
+  <data name="Main1" xml:space="preserve">
+    <value>银光发来的信息：用户名：</value>
+  </data>
+  <data name="Main2" xml:space="preserve">
+    <value>（此图片包含一些地区云）</value>
+  </data>
+  <data name="Main3" xml:space="preserve">
+    <value>美洲虎将在地图上幸存直到{0}</value>
+  </data>
+  <data name="NavBar1" xml:space="preserve">
+    <value>出口</value>
+  </data>
+  <data name="NavBar10" xml:space="preserve">
+    <value>停止监控林地</value>
+  </data>
+  <data name="NavBar11" xml:space="preserve">
+    <value>查看排名</value>
+  </data>
+  <data name="NavBar12" xml:space="preserve">
+    <value>展示我的林地</value>
+  </data>
+  <data name="NavBar13" xml:space="preserve">
+    <value>点击这里分享这个地图</value>
+  </data>
+  <data name="NavBar14" xml:space="preserve">
+    <value>点击这里更换分配给你的土地</value>
+  </data>
+  <data name="NavBar2" xml:space="preserve">
+    <value>我的林地</value>
+  </data>
+  <data name="NavBar3" xml:space="preserve">
+    <value>放大</value>
+  </data>
+  <data name="NavBar4" xml:space="preserve">
+    <value>缩小</value>
+  </data>
+  <data name="NavBar5" xml:space="preserve">
+    <value>全屏</value>
+  </data>
+  <data name="NavBar6" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="NavBar7" xml:space="preserve">
+    <value>分享</value>
+  </data>
+  <data name="NavBar8" xml:space="preserve">
+    <value>新林地</value>
+  </data>
+  <data name="NavBar9" xml:space="preserve">
+    <value>总得分</value>
+  </data>
+  <data name="Notifications1" xml:space="preserve">
+    <value>欢迎来到“森林卫士”</value>
+  </data>
+  <data name="Notifications10" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Notifications11" xml:space="preserve">
+    <value>你肯定要继续？</value>
+  </data>
+  <data name="Notifications12" xml:space="preserve">
+    <value>你成功的更换了你的林地。你准摆好了继续吗？</value>
+  </data>
+  <data name="Notifications13" xml:space="preserve">
+    <value>你已经失去你的林地了！</value>
+  </data>
+  <data name="Notifications14" xml:space="preserve">
+    <value>但是不用担心，点击[继续]键就可以得到新林地，不要忘记尽快查看它的状况。 </value>
+  </data>
+  <data name="Notifications15" xml:space="preserve">
+    <value>你的林地已经被验证了30次，你已经得到2000分了！现在，绿色和平要进行复核。点击[继续]键就可以得到一个新林地。</value>
+  </data>
+  <data name="Notifications16" xml:space="preserve">
+    <value>你的林地已经被验证了30次，你已经得到2000分了！现在，绿色和平要进行复核。点击[继续]键就可以得到一个新林地。</value>
+  </data>
+  <data name="Notifications2" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="Notifications3" xml:space="preserve">
+    <value>恭喜！</value>
+  </data>
+  <data name="Notifications4" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="Notifications5" xml:space="preserve">
+    <value>版主检查了你的警告,确认了你的报告。                                   从现在开始，你可以写一个公开投诉，并点击[举报]键发送到管理部门。     你已经得到了500分！</value>
+  </data>
+  <data name="Notifications6" xml:space="preserve">
+    <value>欢迎来到新的林地！</value>
+  </data>
+  <data name="Notifications7" xml:space="preserve">
+    <value>如果你的林地被云层遮住了，你可以点击[更换林地]键申请一个新林地。</value>
+  </data>
+  <data name="Notifications8" xml:space="preserve">
+    <value>林地更换</value>
+  </data>
+  <data name="Notifications9" xml:space="preserve">
+    <value>你可以每5分钟更换一次林地，但是。。。                               。。。你可以查看其它林地：查看有边界的绿色或黄色林地。                 。。。你可以举报经过验证的林地：查看有边界的红色林地，点击[举报]键。    。。。你可以在Facebook和Twitter上分享你的报告。                      记住，所有这些行动都可以赢得分数！</value>
+  </data>
+  <data name="or" xml:space="preserve">
+    <value>或者</value>
+  </data>
+  <data name="Polls1" xml:space="preserve">
+    <value>你看见毁林了吗？</value>
+  </data>
+  <data name="Polls10" xml:space="preserve">
+    <value>不报告。</value>
+  </data>
+  <data name="Polls11" xml:space="preserve">
+    <value>那些事森林法颁布之前的，因此在“森林卫士”里没有报告。</value>
+  </data>
+  <data name="Polls2" xml:space="preserve">
+    <value>以前</value>
+  </data>
+  <data name="Polls3" xml:space="preserve">
+    <value>以后</value>
+  </data>
+  <data name="Polls4" xml:space="preserve">
+    <value>我不知道</value>
+  </data>
+  <data name="Polls5" xml:space="preserve">
+    <value>看着以下图片</value>
+  </data>
+  <data name="Polls6" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="Polls7" xml:space="preserve">
+    <value>比较右边的图片和2008年以后的图片。这样可以帮助我们，使验证生效的报告更精确。使5个报告生效，你就可以获得加分！</value>
+  </data>
+  <data name="Polls8" xml:space="preserve">
+    <value>重要：</value>
+  </data>
+  <data name="Polls9" xml:space="preserve">
+    <value>如果你在2008年的图片里看见毁林，</value>
+  </data>
+  <data name="PublishMap1" xml:space="preserve">
+    <value>你看见什么有趣的事情了吗？和全世界分享？</value>
+  </data>
+  <data name="PublishMap2" xml:space="preserve">
+    <value>正在缩短网址，请等待。。。</value>
+  </data>
+  <data name="PublishMap3" xml:space="preserve">
+    <value>网址还没有建立，请等待。。。</value>
+  </data>
+  <data name="Ranking1" xml:space="preserve">
+    <value>排名</value>
+  </data>
+  <data name="Ranking2" xml:space="preserve">
+    <value>区域排名</value>
+  </data>
+  <data name="Ranking3" xml:space="preserve">
+    <value>每月排名截止</value>
+  </data>
+  <data name="red" xml:space="preserve">
+    <value>红色</value>
+  </data>
+  <data name="Report1" xml:space="preserve">
+    <value>报告林地状态</value>
+  </data>
+  <data name="Report10" xml:space="preserve">
+    <value>可疑的东西</value>
+  </data>
+  <data name="Report11" xml:space="preserve">
+    <value>生效</value>
+  </data>
+  <data name="Report12" xml:space="preserve">
+    <value>核实</value>
+  </data>
+  <data name="Report2" xml:space="preserve">
+    <value>我没有看到任何问题</value>
+  </data>
+  <data name="Report3" xml:space="preserve">
+    <value>我看见毁林！</value>
+  </data>
+  <data name="Report4" xml:space="preserve">
+    <value>写一封公开投诉信</value>
+  </data>
+  <data name="Report5" xml:space="preserve">
+    <value>使报警生效</value>
+  </data>
+  <data name="Report6" xml:space="preserve">
+    <value>林地没问题！</value>
+  </data>
+  <data name="Report7" xml:space="preserve">
+    <value>我看见可疑的东西</value>
+  </data>
+  <data name="Report8" xml:space="preserve">
+    <value>没问题</value>
+  </data>
+  <data name="Report9" xml:space="preserve">
+    <value>没问题</value>
+  </data>
+  <data name="ReportWindow" xml:space="preserve">
+    <value>使报警生效</value>
+  </data>
+  <data name="Share1" xml:space="preserve">
+    <value>我查看了我在“森林卫士”的林地，它很安全。帮助我拯救萨尔塔的森林！</value>
+  </data>
+  <data name="Share2" xml:space="preserve">
+    <value>我的林地有麻烦了！                                                帮助我核实这个保护萨尔塔森林的安全，加入“森林卫士”。 #35mil举报</value>
+  </data>
+  <data name="Share3" xml:space="preserve">
+    <value>我在“守护者”每周比赛里赢了！我的行动保护了森林。你也加入吧！#35mil举报</value>
+  </data>
+  <data name="Share4" xml:space="preserve">
+    <value>每周比赛开始了！现在参与保护森林。#SoyGuardianDelBosque</value>
+  </data>
+  <data name="Share5" xml:space="preserve">
+    <value>在社交网络上和朋友分享！</value>
+  </data>
+  <data name="Share6" xml:space="preserve">
+    <value>分享：</value>
+  </data>
+  <data name="Stats" xml:space="preserve">
+    <value>统计</value>
+  </data>
+  <data name="Stats1" xml:space="preserve">
+    <value>活跃的“森林卫士”：</value>
+  </data>
+  <data name="Stats2" xml:space="preserve">
+    <value>“森林卫士”总数：</value>
+  </data>
+  <data name="Stats3" xml:space="preserve">
+    <value>在线的“森林卫士”：</value>
+  </data>
+  <data name="StatsActivePlayers" xml:space="preserve">
+    <value>活跃的“森林卫士”</value>
+  </data>
+  <data name="StatsAlertedArea" xml:space="preserve">
+    <value>发出警报的地区</value>
+  </data>
+  <data name="StatsAlertedAreaConfirmed" xml:space="preserve">
+    <value>确认的发出警报的地区</value>
+  </data>
+  <data name="StatsDenouncesCreated" xml:space="preserve">
+    <value>完成举报</value>
+  </data>
+  <data name="StatsGreenPlots" xml:space="preserve">
+    <value>没问题的林地</value>
+  </data>
+  <data name="StatsOkAreaConfirmed" xml:space="preserve">
+    <value>在危险区之外</value>
+  </data>
+  <data name="StatsRedPlots" xml:space="preserve">
+    <value>发出警报的林地</value>
+  </data>
+  <data name="StatsTotalPlayers" xml:space="preserve">
+    <value>“森林卫士”</value>
+  </data>
+  <data name="StatsUsersOnline" xml:space="preserve">
+    <value>在线的“森林卫士”</value>
+  </data>
+  <data name="StatsVerifiedPlots" xml:space="preserve">
+    <value>验证林地</value>
+  </data>
+  <data name="TextBlock" xml:space="preserve">
+    <value>文本块</value>
+  </data>
+  <data name="Timeline1" xml:space="preserve">
+    <value>你正在看的图片来自</value>
+  </data>
+  <data name="Tutorial1" xml:space="preserve">
+    <value>在这个平台上，还有其他监护人，你会负责帮助保护我们的原生森林，在一段时间内监测，并通过最新的卫星图像报告任何毁林行为。</value>
+  </data>
+  <data name="Tutorial10" xml:space="preserve">
+    <value>你</value>
+  </data>
+  <data name="Tutorial11" xml:space="preserve">
+    <value>我在看什么？</value>
+  </data>
+  <data name="Tutorial12" xml:space="preserve">
+    <value>我在看哪里？</value>
+  </data>
+  <data name="Tutorial13" xml:space="preserve">
+    <value>我怎么才能找到？</value>
+  </data>
+  <data name="Tutorial14" xml:space="preserve">
+    <value>放大
+ 在你的林地</value>
+  </data>
+  <data name="Tutorial15" xml:space="preserve">
+    <value>加入日期
+ 比较</value>
+  </data>
+  <data name="Tutorial16" xml:space="preserve">
+    <value>22/05/2013</value>
+  </data>
+  <data name="Tutorial17" xml:space="preserve">
+    <value>03/06/2013</value>
+  </data>
+  <data name="Tutorial18" xml:space="preserve">
+    <value>你会有
+卫星图片</value>
+  </data>
+  <data name="Tutorial19" xml:space="preserve">
+    <value>我的林地没问题</value>
+  </data>
+  <data name="Tutorial2" xml:space="preserve">
+    <value>你想知道更多吗？</value>
+  </data>
+  <data name="Tutorial20" xml:space="preserve">
+    <value>我看见可疑的东西！</value>
+  </data>
+  <data name="Tutorial21" xml:space="preserve">
+    <value>我们需要比较最近的图片和以前的图片来进行监测。
+让我们看看在你的林地上发现了什么活动！点击这里加入最近的图片。</value>
+  </data>
+  <data name="Tutorial23" xml:space="preserve">
+    <value>当你查看自己的林地时，有必要报告你看见的去提醒其他“森林卫士”。
+点击你的林地，然后点击[报告]键</value>
+  </data>
+  <data name="Tutorial24" xml:space="preserve">
+    <value>你的行动赢得了分数！你查看自己的林地赢得了分数。
+很多行动都可以赢得分数，</value>
+  </data>
+  <data name="Tutorial25" xml:space="preserve">
+    <value>恭喜！你已经上完了辅导课。                                         现在你已经准备好保护我们的森林了。                                     如果你有任何问题，请访问“帮助”。</value>
+  </data>
+  <data name="Tutorial26" xml:space="preserve">
+    <value>发出警告的林地呈现红色
+查看发出警告的林地确认或拒绝报告。
+点击警告林地，点击“查看”键</value>
+  </data>
+  <data name="Tutorial27" xml:space="preserve">
+    <value>每隔5天你会分派到一个新林地，除非你的林地处在报警状态。
+你还可以手动更换你的林地，点击[更换林地]键</value>
+  </data>
+  <data name="Tutorial28" xml:space="preserve">
+    <value>26/06/2013</value>
+  </data>
+  <data name="Tutorial29" xml:space="preserve">
+    <value>报告什么
+你看见了</value>
+  </data>
+  <data name="Tutorial3" xml:space="preserve">
+    <value>毁林</value>
+  </data>
+  <data name="Tutorial30" xml:space="preserve">
+    <value>每个“森林卫士”有一块受他保护的土地。点击“我的林地”查看你的土地。</value>
+  </data>
+  <data name="Tutorial31" xml:space="preserve">
+    <value>看看你的土地。</value>
+  </data>
+  <data name="Tutorial32" xml:space="preserve">
+    <value>我们“森林卫士”留意着有不遵守森林保护法的行为。
+拖拽滑动条你可以比较2008年的图片和现在的图片，发现非法毁林的行为。</value>
+  </data>
+  <data name="Tutorial33" xml:space="preserve">
+    <value>太棒了！你已经学会如何发现变化。
+你可以从左侧的列表里添加更多日期。</value>
+  </data>
+  <data name="Tutorial34" xml:space="preserve">
+    <value>成为“森林卫士”冠军！</value>
+  </data>
+  <data name="Tutorial35" xml:space="preserve">
+    <value>这是处于危险中的地区的地图。
+你可以用鼠标移动，平移和缩放。</value>
+  </data>
+  <data name="Tutorial36" xml:space="preserve">
+    <value>继续</value>
+  </data>
+  <data name="Tutorial37" xml:space="preserve">
+    <value>如果你发现什么可疑的东西，把你的林地设成警报状态
+ 如果不是，点击这个键</value>
+  </data>
+  <data name="Tutorial38" xml:space="preserve">
+    <value>我的林地没问题</value>
+  </data>
+  <data name="Tutorial39" xml:space="preserve">
+    <value>林地处于报警状态呈现红色；没问题的林地是灰色</value>
+  </data>
+  <data name="Tutorial4" xml:space="preserve">
+    <value>云层？</value>
+  </data>
+  <data name="Tutorial40" xml:space="preserve">
+    <value>其他“森林卫士"可以查看他们的林地，也可以帮助查看你的林地，确认你的观察结果。</value>
+  </data>
+  <data name="Tutorial41" xml:space="preserve">
+    <value>当40个人查看过你的林地，你可以得到一块新的林地，以前的林地等待确认。   如果观察结果确认了，你可以写一个投诉信，清楚地指出在该地区法律没有得到执行。
+ 投诉是你的工具！</value>
+  </data>
+  <data name="Tutorial42" xml:space="preserve">
+    <value>查看后你可以报告</value>
+  </data>
+  <data name="Tutorial43" xml:space="preserve">
+    <value>如果你看见毁林</value>
+  </data>
+  <data name="Tutorial44" xml:space="preserve">
+    <value>或者</value>
+  </data>
+  <data name="Tutorial45" xml:space="preserve">
+    <value>如果你们没有看见任何问题</value>
+  </data>
+  <data name="Tutorial46" xml:space="preserve">
+    <value>如果你看见其他“森林卫士”的林地</value>
+  </data>
+  <data name="Tutorial47" xml:space="preserve">
+    <value>点击它,再点击[查看]键</value>
+  </data>
+  <data name="Tutorial48" xml:space="preserve">
+    <value>和以前一样,你可以报告你的观察结果,帮助你的"森林卫士"朋友核实他的举报。
+对一块地的核实越多，就越容易发现问题。</value>
+  </data>
+  <data name="Tutorial49" xml:space="preserve">
+    <value>毁林看上去什么样子？</value>
+  </data>
+  <data name="Tutorial5" xml:space="preserve">
+    <value>绿色区域？</value>
+  </data>
+  <data name="Tutorial50" xml:space="preserve">
+    <value>观察一下图片。左边是绿色和平拍摄的航空图片，右边是卫星图片。</value>
+  </data>
+  <data name="Tutorial51" xml:space="preserve">
+    <value>航空-健康的森林</value>
+  </data>
+  <data name="Tutorial52" xml:space="preserve">
+    <value>航空-毁林</value>
+  </data>
+  <data name="Tutorial53" xml:space="preserve">
+    <value>卫星-健康的森林</value>
+  </data>
+  <data name="Tutorial54" xml:space="preserve">
+    <value>卫星-毁林</value>
+  </data>
+  <data name="Tutorial6" xml:space="preserve">
+    <value>报警</value>
+  </data>
+  <data name="Tutorial7" xml:space="preserve">
+    <value>林地没问题！</value>
+  </data>
+  <data name="Tutorial8" xml:space="preserve">
+    <value>林地有危险！</value>
+  </data>
+  <data name="Tutorial9" xml:space="preserve">
+    <value>你的林地</value>
+  </data>
+  <data name="TutorialAbout" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="TutorialComplete" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="TutorialGame1" xml:space="preserve">
+    <value>继续 »</value>
+  </data>
+  <data name="TutorialGame10" xml:space="preserve">
+    <value>牢记在心！</value>
+  </data>
+  <data name="TutorialGame11" xml:space="preserve">
+    <value>我们使用的从Landsat7卫星传来的图片存在光学错误。你可以在图片上看见错误线条。
+即使存在错误，我们也可以发现毁林。</value>
+  </data>
+  <data name="TutorialGame12" xml:space="preserve">
+    <value>让我们开始吧！</value>
+  </data>
+  <data name="TutorialGame13" xml:space="preserve">
+    <value>现在你知道真彩色的图片是怎样的了，让我们尝试几个例子吧。下一屏，请看图片中有变化的区域。报告得越详细，得分越高！</value>
+  </data>
+  <data name="TutorialGame14" xml:space="preserve">
+    <value>发现变化！</value>
+  </data>
+  <data name="TutorialGame15" xml:space="preserve">
+    <value>近看这两幅图片。你可以看见变化吗？点击出现毁林的图片。</value>
+  </data>
+  <data name="TutorialGame16" xml:space="preserve">
+    <value>结果</value>
+  </data>
+  <data name="TutorialGame2" xml:space="preserve">
+    <value>真彩色图片</value>
+  </data>
+  <data name="TutorialGame3" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="TutorialGame4" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="TutorialGame5" xml:space="preserve">
+    <value>太棒了！你发现了毁林。你成为了专家，再来一次，完成所有案例，赢得加分！</value>
+  </data>
+  <data name="TutorialGame6" xml:space="preserve">
+    <value>太漂亮了！你现在是真彩色图片专家了！</value>
+  </data>
+  <data name="TutorialGame7" xml:space="preserve">
+    <value>你一棵树也没找到。。。但是不要担心，你可以继续尝试，多少次都可以！</value>
+  </data>
+  <data name="TutorialGame8" xml:space="preserve">
+    <value>欢迎！</value>
+  </data>
+  <data name="TutorialGame9" xml:space="preserve">
+    <value>“森林卫士”使用的卫星地图来自不同的渠道。我们主要使用Landsat 7卫星提供的真彩色图片。
+真彩色图片可以呈现地球上所有物质的自然色彩，和真正的照片类似。
+让我们学习如何在这些照片里发现毁林！</value>
+  </data>
+  <data name="TutorialGameWin1" xml:space="preserve">
+    <value>好的！你已经学会如何发现毁林。再来一次直到你完成所有的案例，成为一个专家。</value>
+  </data>
+  <data name="TutorialGameWin2" xml:space="preserve">
+    <value>不要忘记和你的朋友们分享，这样他们也可以成为“森林卫士”。</value>
+  </data>
+  <data name="TutorialHelph" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="TutorialImgSatelital" xml:space="preserve">
+    <value>卫星图像</value>
+  </data>
+  <data name="TutorialLevel1" xml:space="preserve">
+    <value>1级</value>
+  </data>
+  <data name="TutorialLevel2" xml:space="preserve">
+    <value>2级</value>
+  </data>
+  <data name="TutorialLevel3" xml:space="preserve">
+    <value>3级</value>
+  </data>
+  <data name="TutorialMenuWin1" xml:space="preserve">
+    <value>我们在看什么？</value>
+  </data>
+  <data name="TutorialMenuWin10" xml:space="preserve">
+    <value>我的个人信息出现在举报里！我没有提交！</value>
+  </data>
+  <data name="TutorialMenuWin11" xml:space="preserve">
+    <value>出于安全和隐私的原因，监护人不存储其用户的个人信息。然而，当你创建一个声讨我们从您签署挽救森林信访把你的数据。如果你不希望提交您的个人信息的声讨，选择它是匿名的。</value>
+  </data>
+  <data name="TutorialMenuWin12" xml:space="preserve">
+    <value>为什么有时候卫星图片的颜色是错的？</value>
+  </data>
+  <data name="TutorialMenuWin13" xml:space="preserve">
+    <value>我们在“森林卫士”里使用的卫星可以捕捉比人眼能观察到的更多的因素。这就是为什么有时候你可以看见云层和其他东西。这些可以让我们看见某一地区“不”真实的一面。而且，照片是在不同时间拍的。</value>
+  </data>
+  <data name="TutorialMenuWin14" xml:space="preserve">
+    <value>我在哪里可以看见原始图片？</value>
+  </data>
+  <data name="TutorialMenuWin15" xml:space="preserve">
+    <value>美国地质勘探局(USGS)的网站上有一个存档，包括所有我们在“森林卫士”使用的卫星图片。更多信息请访问：www.usgs.gov</value>
+  </data>
+  <data name="TutorialMenuWin16" xml:space="preserve">
+    <value>我不明白我在自己林地上看到的是否是毁林</value>
+  </data>
+  <data name="TutorialMenuWin17" xml:space="preserve">
+    <value>这种情况下，我们建议你采取2个行动。你可以访问帮助菜单，玩迷你游戏一。玩迷你游戏可以帮助你更好的理解什么是毁林，什么不是。</value>
+  </data>
+  <data name="TutorialMenuWin18" xml:space="preserve">
+    <value>一只美洲虎出现了，这是什么？</value>
+  </data>
+  <data name="TutorialMenuWin19" xml:space="preserve">
+    <value>当你看见一条信息告诉你一只美洲虎在地图上出现，这就是说一场寻找美洲虎的比赛在所有“森林卫士”中展开了。在地图的一些地区，在一定缩放等级（当你达到合适的缩放等级时，你会看见望远镜的图标代替美洲虎的图标），你可以发现一只小美洲虎。如果你看见它，赶快点击它保护它！第一个发现它的“森林卫士”会赢得大把的加分。</value>
+  </data>
+  <data name="TutorialMenuWin2" xml:space="preserve">
+    <value>我们希望国家法26331，即大家熟知的“森林法”可以实施。森林法建立不同的保护区，用不同颜色加以区分。红色区域需要完全保护，黄色区域可以可持续地砍伐，绿色区域如果影响评价和公众听证会都做了，规定更宽松。分派给“森林卫士”的林地只是红色和黄色区域。</value>
+  </data>
+  <data name="TutorialMenuWin20" xml:space="preserve">
+    <value>什么时候举报键是开启的？</value>
+  </data>
+  <data name="TutorialMenuWin21" xml:space="preserve">
+    <value>当你的林地有超过30次核实，绿色和平会接手这项工作，直到我们的专家核实你的报告。我们会给你发邮件告知你核实结果。如果你没有收到邮件，请查一下你的邮箱地址是否正确。如果你的林地出现黄色边界，你可以写举报信。</value>
+  </data>
+  <data name="TutorialMenuWin22" xml:space="preserve">
+    <value>在2008年的图片上有毁林活动。我需要报告这个吗？</value>
+  </data>
+  <data name="TutorialMenuWin23" xml:space="preserve">
+    <value>不，你不需要报告这个。</value>
+  </data>
+  <data name="TutorialMenuWin3" xml:space="preserve">
+    <value>我的报告会被怎么处理？</value>
+  </data>
+  <data name="TutorialMenuWin4" xml:space="preserve">
+    <value>绿色和平会定期查看报告并确认。发现毁林的情况，林地会被标成黄色，并进行投诉。</value>
+  </data>
+  <data name="TutorialMenuWin5" xml:space="preserve">
+    <value>我的举报信发到哪里?</value>
+  </data>
+  <data name="TutorialMenuWin6" xml:space="preserve">
+    <value>当你点击发送您的声讨按钮，它sended就省省长。</value>
+  </data>
+  <data name="TutorialMenuWin7" xml:space="preserve">
+    <value>我可以发送匿名举报信吗？</value>
+  </data>
+  <data name="TutorialMenuWin8" xml:space="preserve">
+    <value>是的。点击你的名字下面的按钮，进行匿名举报。</value>
+  </data>
+  <data name="TutorialMenuWin9" xml:space="preserve">
+    <value>常见问题</value>
+  </data>
+  <data name="TutorialMiniGame" xml:space="preserve">
+    <value>迷你游戏</value>
+  </data>
+  <data name="TutorialMiniGame1" xml:space="preserve">
+    <value>迷你游戏一</value>
+  </data>
+  <data name="TutorialMiniGame2" xml:space="preserve">
+    <value>欢迎!在这个游戏里你可以训练你的眼睛如何找到毁林活动,能区分健康的土地和被推土机摧毁的森林。                                               接受越多的训练，你的报告就越精确。森林需要你！</value>
+  </data>
+  <data name="TutorialMiniGame3" xml:space="preserve">
+    <value>准备好了吗？</value>
+  </data>
+  <data name="TutorialMiniGame4" xml:space="preserve">
+    <value>选择显示出毁林的图片</value>
+  </data>
+  <data name="TutorialMiniGame5" xml:space="preserve">
+    <value>现在，没有图片。请稍候再试。谢谢！</value>
+  </data>
+  <data name="TutorialMiniGame6" xml:space="preserve">
+    <value>时间奖励</value>
+  </data>
+  <data name="TutorialMiniGame7" xml:space="preserve">
+    <value>好的！你已经学会如何发现毁林。再来一次直到你完成所有的案例，成为一个专家。</value>
+  </data>
+  <data name="TutorialMiniGame8" xml:space="preserve">
+    <value>我得到了</value>
+  </data>
+  <data name="TutorialMiniGame9" xml:space="preserve">
+    <value>在“森林卫士”发现毁林游戏中的得分！你可以成为一个“森林卫士”，在guardianes.greenpeace.org.ar登录</value>
+  </data>
+  <data name="TutorialPlay" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="TutorialPoints" xml:space="preserve">
+    <value>分数</value>
+  </data>
+  <data name="UserPanel1" xml:space="preserve">
+    <value>使用控制面板</value>
+  </data>
+  <data name="UserPanel10" xml:space="preserve">
+    <value>英语</value>
+  </data>
+  <data name="UserPanel11" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="UserPanel12" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="UserPanel13" xml:space="preserve">
+    <value>国家</value>
+  </data>
+  <data name="UserPanel14" xml:space="preserve">
+    <value>地区</value>
+  </data>
+  <data name="UserPanel15" xml:space="preserve">
+    <value>发送给我邮件，不需要通知</value>
+  </data>
+  <data name="UserPanel16" xml:space="preserve">
+    <value>名字</value>
+  </data>
+  <data name="UserPanel17" xml:space="preserve">
+    <value>收藏</value>
+  </data>
+  <data name="UserPanel18" xml:space="preserve">
+    <value>收藏</value>
+  </data>
+  <data name="UserPanel2" xml:space="preserve">
+    <value>更改你的密码</value>
+  </data>
+  <data name="UserPanel20" xml:space="preserve">
+    <value>恭喜！你保护了{0}次美洲虎</value>
+  </data>
+  <data name="UserPanel21" xml:space="preserve">
+    <value>你还没有保护过任何一只美洲虎</value>
+  </data>
+  <data name="UserPanel22" xml:space="preserve">
+    <value>现在的密码不正确</value>
+  </data>
+  <data name="UserPanel23" xml:space="preserve">
+    <value>新密码必须和现在的密码不同</value>
+  </data>
+  <data name="UserPanel24" xml:space="preserve">
+    <value>密码必须</value>
+  </data>
+  <data name="UserPanel25" xml:space="preserve">
+    <value>重复的密码不符合。</value>
+  </data>
+  <data name="UserPanel26" xml:space="preserve">
+    <value>出现一个错误。请稍后再试一次。</value>
+  </data>
+  <data name="UserPanel27" xml:space="preserve">
+    <value>名字必须只包含字母和数字，不能超过20个字符。</value>
+  </data>
+  <data name="UserPanel28" xml:space="preserve">
+    <value>正确地保存数据了。下次你登录“森林卫士”时会显示更改。</value>
+  </data>
+  <data name="UserPanel3" xml:space="preserve">
+    <value>选择你的名字，语言，国家和通知选项</value>
+  </data>
+  <data name="UserPanel30" xml:space="preserve">
+    <value>正确更换了密码。</value>
+  </data>
+  <data name="UserPanel31" xml:space="preserve">
+    <value>出现一个错误。请稍后再试一次。</value>
+  </data>
+  <data name="UserPanel32" xml:space="preserve">
+    <value>邮件</value>
+  </data>
+  <data name="UserPanel33" xml:space="preserve">
+    <value>现有邮件，尝试其他</value>
+  </data>
+  <data name="UserPanel4" xml:space="preserve">
+    <value>更改你的区域格局</value>
+  </data>
+  <data name="UserPanel5" xml:space="preserve">
+    <value>更改你的密码</value>
+  </data>
+  <data name="UserPanel6" xml:space="preserve">
+    <value>现在的密码</value>
+  </data>
+  <data name="UserPanel7" xml:space="preserve">
+    <value>新密码</value>
+  </data>
+  <data name="UserPanel8" xml:space="preserve">
+    <value>重复新密码</value>
+  </data>
+  <data name="UserPanel9" xml:space="preserve">
+    <value>西班牙</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>版本：</value>
+  </data>
+  <data name="WW1" xml:space="preserve">
+    <value>丹尼尔</value>
+  </data>
+  <data name="WW2" xml:space="preserve">
+    <value>科尔多瓦</value>
+  </data>
+  <data name="WW3" xml:space="preserve">
+    <value>帕特里夏</value>
+  </data>
+  <data name="WW4" xml:space="preserve">
+    <value>查科</value>
+  </data>
+  <data name="Yellow" xml:space="preserve">
+    <value>黄色的</value>
+  </data>
+  <data name="BlockedGame" xml:space="preserve">
+    <value>游戏受阻</value>
+  </data>
+  <data name="ClickToPlay" xml:space="preserve">
+    <value>点击这里玩</value>
+  </data>
+  <data name="HexInfo9" xml:space="preserve">
+    <value>屋:</value>
+  </data>
+  <data name="Jaguar" xml:space="preserve">
+    <value>捷豹</value>
+  </data>
+  <data name="Layers17" xml:space="preserve">
+    <value>屋</value>
+  </data>
+  <data name="Layers18" xml:space="preserve">
+    <value>点击这里切换屋</value>
+  </data>
+  <data name="PreTutorial" xml:space="preserve">
+    <value>预教程</value>
+  </data>
+  <data name="Prizes" xml:space="preserve">
+    <value>奖品</value>
+  </data>
+  <data name="Ranking" xml:space="preserve">
+    <value>排名</value>
+  </data>
+  <data name="RankingTitle" xml:space="preserve">
+    <value>监护人 - 排名</value>
+  </data>
+  <data name="ReportValidateText" xml:space="preserve">
+    <value>你必须选择其中一个选项上面</value>
+  </data>
+  <data name="SeePrizes" xml:space="preserve">
+    <value>（见奖品）</value>
+  </data>
+  <data name="ShareInSn" xml:space="preserve">
+    <value>与社交网络上你的朋友分享你的行动。</value>
+  </data>
+  <data name="Tutorial" xml:space="preserve">
+    <value>教程</value>
+  </data>
+  <data name="Share7" xml:space="preserve">
+    <value>我发现毁林</value>
+  </data>
+  <data name="Share8" xml:space="preserve">
+    <value>。你能不能帮我核实了吗？</value>
+  </data>
+  <data name="ChangePc" xml:space="preserve">
+    <value>游戏改变国家</value>
+  </data>
+  <data name="NavBar15" xml:space="preserve">
+    <value>更换国家</value>
+  </data>
+  <data name="ARGENTINA" xml:space="preserve">
+    <value>阿根廷</value>
+  </data>
+  <data name="CANADA" xml:space="preserve">
+    <value>加拿大</value>
+  </data>
+  <data name="CHINA" xml:space="preserve">
+    <value>中国</value>
+  </data>
+  <data name="SelectCountryFromMap" xml:space="preserve">
+    <value>从地图上选择国家</value>
+  </data>
+  <data name="LoadingMaps" xml:space="preserve">
+    <value>加载地图... {0}等待几秒钟完成加载地图</value>
+  </data>
+  <data name="PreviousDeforestation" xml:space="preserve">
+    <value>\n（这个图像是砍伐森林之前的森林法）</value>
+  </data>
+  <data name="Ranking4" xml:space="preserve">
+    <value>全球排名</value>
+  </data>
+  <data name="BackToRanking" xml:space="preserve">
+    <value>（返回上级）</value>
+  </data>
+  <data name="GuardianesUrl" xml:space="preserve">
+    <value>http://guardianes.greenpeace.org.ar</value>
+  </data>
+  <data name="Tutorial55" xml:space="preserve">
+    <value>如果你看到了森林砍伐，点击红色的图标，否则点击绿色。别担心，变化不会被保存</value>
+  </data>
+  <data name="Tutorial56" xml:space="preserve">
+    <value>我们还需要检查其他用户报告，以验证他们的发现。寻找地块与边界中看到的，你必须要做的事情。需要30验证的阴谋进行验证。</value>
+  </data>
+  <data name="Report13" xml:space="preserve">
+    <value>房地产:</value>
+  </data>
+  <data name="Tutorial22" xml:space="preserve">
+    <value>移动
+滑动条
+看看
+有什么不同</value>
+  </data>
+  <data name="ChangeCountryError" xml:space="preserve">
+    <value>选择一个不同的国家或地区之一，你已经玩</value>
+  </data>
+  <data name="ChangeCountryError2" xml:space="preserve">
+    <value>选择一个区域，这个国家</value>
+  </data>
+  <data name="Task1" xml:space="preserve">
+    <value>检查你的阴谋毁林</value>
+  </data>
+  <data name="Task2" xml:space="preserve">
+    <value>检查其他用户的情节</value>
+  </data>
+  <data name="Task3" xml:space="preserve">
+    <value>分享到社交网络</value>
+  </data>
+  <data name="Task4" xml:space="preserve">
+    <value>改变你的阴谋</value>
+  </data>
+  <data name="Task5" xml:space="preserve">
+    <value>登录5次</value>
+  </data>
+  <data name="Task6" xml:space="preserve">
+    <value>验证5幅地块</value>
+  </data>
+  <data name="TasksTitle" xml:space="preserve">
+    <value>下一步做什么</value>
+  </data>
+  <data name="NO" xml:space="preserve">
+    <value>没有</value>
+  </data>
+  <data name="SelectRegion" xml:space="preserve">
+    <value>选择一个区域</value>
+  </data>
+  <data name="UserPanel19" xml:space="preserve">
+    <value>启用自动共享</value>
+  </data>
+  <data name="PercentageVPlots" xml:space="preserve">
+    <value>验证图：</value>
+  </data>
+  <data name="PrecisionSummary" xml:space="preserve">
+    <value>你的准确度砍伐的验证是：</value>
+  </data>
+  <data name="PrecisionSummary2" xml:space="preserve">
+    <value>为了提高您可以用练习小游戏，并继续报告地块</value>
+  </data>
+  <data name="Precision" xml:space="preserve">
+    <value>精确</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>变化</value>
+  </data>
+  <data name="My" xml:space="preserve">
+    <value>我的</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>新</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>的</value>
+  </data>
+  <data name="Plot" xml:space="preserve">
+    <value>情节</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>区域</value>
+  </data>
+  <data name="AccountConfig" xml:space="preserve">
+    <value>帐户配置</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>全屏</value>
+  </data>
+  <data name="GoToAnotherRegion" xml:space="preserve">
+    <value>转到另一区域</value>
+  </data>
+  <data name="PlotsVerified" xml:space="preserve">
+    <value>您在这个区域审查地块。</value>
+  </data>
+  <data name="PrecisionPercentage" xml:space="preserve">
+    <value>你的准确率ESTA地区。</value>
+  </data>
+  <data name="RegionalScore" xml:space="preserve">
+    <value>这是你的分数这个地区。</value>
+  </data>
+  <data name="NoMoreLands" xml:space="preserve">
+    <value>该地区已-完成感谢您的参与和其他监护人。不久，我们将有一个新的卫星图像，继续监视。同时，您可以检查其他区域。</value>
+  </data>
+  <data name="References" xml:space="preserve">
+    <value>打开引用</value>
+  </data>
+  <data name="As1001" xml:space="preserve">
+    <value>检查</value>
+  </data>
+  <data name="As1001Ou" xml:space="preserve">
+    <value>检查</value>
+  </data>
+  <data name="As1001OuText" xml:space="preserve">
+    <value>我已经验证</value>
+  </data>
+  <data name="As1001Text" xml:space="preserve">
+    <value>检查</value>
+  </data>
+  <data name="As1002" xml:space="preserve">
+    <value> 次，自己的土地</value>
+  </data>
+  <data name="As1002Ou" xml:space="preserve">
+    <value>用户地块</value>
+  </data>
+  <data name="As1002OuText" xml:space="preserve">
+    <value>用户地块</value>
+  </data>
+  <data name="As1002Text" xml:space="preserve">
+    <value> 用户地块</value>
+  </data>
+  <data name="As100Den1" xml:space="preserve">
+    <value>谴责</value>
+  </data>
+  <data name="As100Den1Text" xml:space="preserve">
+    <value>我谴责</value>
+  </data>
+  <data name="As100Den2" xml:space="preserve">
+    <value>非法毁林</value>
+  </data>
+  <data name="As100Den2Text" xml:space="preserve">
+    <value>非法清算</value>
+  </data>
+  <data name="AsCheck10OU" xml:space="preserve">
+    <value>检查10次其它用户PLOTS</value>
+  </data>
+  <data name="AsCheck10OUText" xml:space="preserve">
+    <value>我已验证用户10地块</value>
+  </data>
+  <data name="AsCheck10OwP" xml:space="preserve">
+    <value>检查10次自己的土地</value>
+  </data>
+  <data name="AsCheck10OwPText" xml:space="preserve">
+    <value>我已经检查10次的阴谋</value>
+  </data>
+  <data name="AsCheck50OU" xml:space="preserve">
+    <value>检查50次〜其它用户情节</value>
+  </data>
+  <data name="AsCheck50OUText" xml:space="preserve">
+    <value>我已验证用户50地块</value>
+  </data>
+  <data name="AsCheck50OwP" xml:space="preserve">
+    <value>检查50次，自己的土地</value>
+  </data>
+  <data name="AsCheck50OwPText" xml:space="preserve">
+    <value>我已经检查50次的阴谋</value>
+  </data>
+  <data name="AsContestWin" xml:space="preserve">
+    <value>我赢了比赛</value>
+  </data>
+  <data name="AsContestWinText" xml:space="preserve">
+    <value>通过监控濒危森林的我成为了一名顶级守护这个星期。加入我在这里：</value>
+  </data>
+  <data name="AsDen10" xml:space="preserve">
+    <value>10斥毁林非法</value>
+  </data>
+  <data name="AsDen10Tex" xml:space="preserve">
+    <value>举报违法10清算</value>
+  </data>
+  <data name="AsDen50" xml:space="preserve">
+    <value>50斥毁林非法</value>
+  </data>
+  <data name="AsDen50Text" xml:space="preserve">
+    <value>我谴责违法50清算</value>
+  </data>
+  <data name="AsReg" xml:space="preserve">
+    <value>登记</value>
+  </data>
+  <data name="ASRegText" xml:space="preserve">
+    <value>我已经成为一个守护者，而我现在监测濒危森林。加入我在这里：</value>
+  </data>
+  <data name="AsRepOPConf" xml:space="preserve">
+    <value>对自己的土地毁林报告确认</value>
+  </data>
+  <data name="AsRepOPConfText" xml:space="preserve">
+    <value>我发现非法砍伐森林在一块土地上，我监控。这需要停止。现在采取行动在这里：</value>
+  </data>
+  <data name="AsTop1" xml:space="preserve">
+    <value>我成为了第一个在本周竞赛</value>
+  </data>
+  <data name="AsTop10" xml:space="preserve">
+    <value>我进入了前10守护</value>
+  </data>
+  <data name="AsTop10Text" xml:space="preserve">
+    <value>我在监护人进入前10</value>
+  </data>
+  <data name="AsTop1Text" xml:space="preserve">
+    <value>我第一次去守护者中的排名</value>
+  </data>
+  <data name="HashTag" xml:space="preserve">
+    <value>#ImForestGuardian</value>
+  </data>
+  <data name="TutorialMenuWin24" xml:space="preserve">
+    <value>最后剩下的在底部“的事情要做下一个”的名单？</value>
+  </data>
+  <data name="TutorialMenuWin25" xml:space="preserve">
+    <value>他们是为你完成，以推进监护人，并学习如何使用该平台的任务。一旦任务完成，它会消失从列表。</value>
+  </data>
+  <data name="TutorialMenuWin26" xml:space="preserve">
+    <value>什么是所示区域名称下的百分比是多少？</value>
+  </data>
+  <data name="TutorialMenuWin27" xml:space="preserve">
+    <value>它表明有多少地块已检查的玩家社区。一旦数字变至100％该区域的当前的卫星图像的分析已经完成。我们将定期提供更新，更多的最近拍摄方式取代填妥的图像，这样可以保持一段时间监测森林。</value>
+  </data>
+  <data name="TutorialMenuWin28" xml:space="preserve">
+    <value>什么是按钮“森林法”的呢？</value>
+  </data>
+  <data name="TutorialMenuWin29" xml:space="preserve">
+    <value>它会激活一个图层，显示你这在该地区的区域得到保护。例如，在阿根廷，这说明你的黄色和红色区域由2008年的森林法确定。在这两个领域中，记录被禁止。在其他国家，这个按钮可以根据当地法规，国家公园的轮廓，特许边框等显示其他保护区</value>
+  </data>
+  <data name="TutorialMenuWin30" xml:space="preserve">
+    <value>有这些窗口问我在Facebook上分享飘飞 - 我该如何将它们关闭？</value>
+  </data>
+  <data name="TutorialMenuWin31" xml:space="preserve">
+    <value>正如你提前使用的平台和命中某些里程碑，监护人要你在Facebook上和朋友分享这些成就。这有助于流传着一句话，让更多的人在船上，以帮助保护森林，所以请不要考虑你的共享里程碑。这就是说，您可以进入控制面板，通知选项，并禁用“自动股”关闭这个功能。</value>
+  </data>
+  <data name="TutorialMenuWin32" xml:space="preserve">
+    <value>我要如何改变，我的监视区域？</value>
+  </data>
+  <data name="TutorialMenuWin33" xml:space="preserve">
+    <value>要改变区域，您可以使用“更改区域”按钮，在左边菜单，或点击该国国旗的图标。一个世界地图将会出现，您可以在其中选择国家（如果可用，该国境内的区域），你要监视。</value>
+  </data>
+  <data name="TutorialMenuWin34" xml:space="preserve">
+    <value>有在该地区的统计百分比的十字图标 - 那是什么？</value>
+  </data>
+  <data name="TutorialMenuWin35" xml:space="preserve">
+    <value>这个数字显示了你的准确度报告毁林时。当您报告重复的状态，或验证其他监护人的报道中，我们添加一个最后的核实后一定数量的玩家报告已经达到。你可以准确影响你的分数，如果过低，则该图标会变成红色，你会得到更少的分数，直到你改善：如果你是用一贯的高精确度的报告，它会变成金色，你会得到加分。</value>
+  </data>
+  <data name="TutorialMenuWin36" xml:space="preserve">
+    <value>高精度（金）：</value>
+  </data>
+  <data name="TutorialMenuWin37" xml:space="preserve">
+    <value>中等精度（白）：</value>
+  </data>
+  <data name="TutorialMenuWin38" xml:space="preserve">
+    <value>精度低（红色）：</value>
+  </data>
+  <data name="TutorialMenuWin39" xml:space="preserve">
+    <value>你得到25％的分数奖金为每个报表</value>
+  </data>
+  <data name="TutorialMenuWin40" xml:space="preserve">
+    <value>你的分数没有影响</value>
+  </data>
+  <data name="TutorialMenuWin41" xml:space="preserve">
+    <value>你得到每份报告得分少25％</value>
+  </data>
+  <data name="TutorialMenuWin42" xml:space="preserve">
+    <value>关注并汇报前仔细检查卫星图像：高精度让你更多的积分，让你在排行榜上升得更快！</value>
+  </data>
+  <data name="ContextTut1Chaco" xml:space="preserve">
+    <value>2012年5月，政府中止与绿色和平组织的会议后60天查科选择性的结算系统，林牧（集约化畜牧+林业）和两辆推土机是被砍伐森林，与全省，在由森林法的保护保护区的许可。
+
+在与国家农业技术研究所，环保，林业和技术组织的协商在今年7月，省政府下达的安排二千零一十二分之五百三十四与法团等新的要求：
+- 他们将不会被允许在超过300公顷（合100分3个阶段）更大的区域。
+- 使用推土机是禁止的。罗洛拖拉机和宽度&lt;3 m的使用。
+- 它们应保持至少120棵10厘米，每公顷磷酸二铵。
+- 他们必须进行旋转和牲畜关闭，以保证恢复。</value>
+  </data>
+  <data name="ContextTut1Salta" xml:space="preserve">
+    <value>在2014年12月，萨尔塔政府废除法令十分之二千二百一十一和11分之3136，这让做重新分类，并删除房产税在保护区（130,000公顷的土地被授权）。绿色和平组织开垦两年，控制和阻断几种扦插。在运动35万人参加。萨尔塔森林联盟提供5万个签名的州长。</value>
+  </data>
+  <data name="ContextTut2Chaco" xml:space="preserve">
+    <value>省司法厅下令评估报告毁林绿色和平组织的影响，并确认该投诉的真实性。
+
+帮助我们控制了查科的森林法得到满足，而不是清除保护区。</value>
+  </data>
+  <data name="ContextTut2Salta" xml:space="preserve">
+    <value>森林法萨尔塔违反由国家，民族的，Ombudsmanof的国家的审计长环境部和100多个社会组织和专家拒绝。
+
+帮助我们检查森林法在萨尔塔合规性和不清除保护区。</value>
+  </data>
+  <data name="ContextTutorial" xml:space="preserve">
+    <value>上下文教程</value>
+  </data>
+</root>
